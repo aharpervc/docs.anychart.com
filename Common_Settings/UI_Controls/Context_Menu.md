@@ -167,7 +167,31 @@ Here is a sample of a custom context menu:
 
 ## Change the Look
 
-If you want to tune the visual appearance of the Context Menu you can define desirable appearance in you css file for custom css class and add the class name to the menu using {api:anychart.ui.ContextMenu#addClassName}.addClassName(){api} method.
+If you want to tune the visual appearance of the Context Menu you can define desirable appearance in your css file. Here is a list of classes that are used for managing menu's appearance:
+
+* anychart-menu
+* anychart-menu-nocheckbox
+* anychart-menu-noicon
+* anychart-menu-noaccel
+* anychart-menu-scrollable
+* anychart-menuitem
+* anychart-menuitem-rtl
+* anychart-menuitem-content
+* anychart-menuitem-disabled
+* anychart-menuitem-highlight
+* anychart-menuitem-hover
+* anychart-menuitem-checkbox
+* anychart-menuitem-icon
+* anychart-menuitem-accel
+* anychart-menuitem-link
+* anychart-menuitem-mnemonic-separator
+* anychart-menuitem-highlight
+* anychart-menuseparator
+* anychart-submenu-arrow
+
+You can change these classes in your css file or in the html code of your page to apply desirable appearance. Note, that your css with custom visual appearance have to be referenced after the reference to the AnyChart js file.  
+  
+Along with adjusting default classes you can define a custom css class and apply the class name to the menu using {api:anychart.ui.ContextMenu#addClassName}.addClassName(){api} method.
 
 ## Context
 
