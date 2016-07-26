@@ -15,7 +15,8 @@
  * [Advanced Content Formatting](#advanced_content_formatting)
 * [Position](#position)
  * [Fixed Tooltip Position](#fixed_tooltip_position)
-* [Hiding Time](#hiding_time)
+* [Hide](#hide)
+ * [Hiding Time](#hiding_time)
 * [Themes](#themes)
 
 ## Overview
@@ -242,7 +243,23 @@ That is how the sample with the code from above looks like:
 
 **Note**: You can shift tooltips position using {api:anychart.core.ui.ChartTooltip#offsetX}**offsetX()**{api} and {api:anychart.core.ui.ChartTooltip#offsetY}**offsetY()**{api} methods.
 
-## Hiding Time
+
+## Hide
+
+IF you need to hide the tooltip for some reasons, use {api:anychart.core.ui.Tooltip#hide}.hide(){api} method. Tooltips can be hidden for the whole chart or for a discrete series. 
+
+```
+// make tooltips hide on a click
+chart.listen("click", function(){
+  chart.tooltip().hide(true);
+});
+```
+
+That is how the sample with the code from above looks like:
+
+{sample}CS\_Tooltip\_15{sample}
+
+### Hiding Time
 
 In some cases you may need to display a tooltip for a couple of moments after a point was unhovered. Use {api:anychart.core.ui.SeriesTooltip#hideDelay}**hideDelay()**{api} method to set timer to display tooltip a bit longer.
 
@@ -252,6 +269,8 @@ In some cases you may need to display a tooltip for a couple of moments after a 
   // set delay time in milliseconds
   tooltip.hideDelay(1000);
 ```
+
+{sample}CS\_Tooltip\_16{sample}
 
 ### Themes
 
@@ -285,4 +304,4 @@ Tooltips can be adjusted using AnyChart Themes. Themes makes it possible to set 
 
 Settings for the tooltip in the sample below were applied using themes. Click "launch in playground" to see how settings for tooltip can be applied using AnyChart themes.
 
-{sample}CS\_Tooltip\_15{sample}
+{sample}CS\_Tooltip\_17{sample}

@@ -9,6 +9,7 @@
  * [Axes](#axes)
  * [Position](#position)
  * [DateTime Highlighter](#datetime_highlighter)
+* [Palette](#palette)
 
 ## Overview
 
@@ -129,3 +130,37 @@ thirdPlot.dateTimeHighlighter(false);
 ```
 
 {sample}STOCK\_Plots\_05{sample}
+
+
+## Palette
+
+Using palettes can make your work with colors and fills easier and faster. There are two methods to work with different palette types: {api:anychart.core.stock.Plot#palette}.palette(){api} for setting series colors and {api:anychart.core.stock.Plot#hatchFillPalette}.hatchFillPalette(){api} for setting hatch fills (makes sense when used for series which points have area to be filled, like Bar, Column, Pie, etc.).
+
+Both methods accept array of strings as the function arguments. These methods usage will look like in the following sample:
+
+```
+// using palettes
+firstPlot.palette(["#827717", "#c77532"]);
+secondPlot.hatchFillPalette(["divot"]);
+```
+
+Note that it's necessary to set the {api:anychart.core.stock.series.RangeColumn#hatchFill}.hatchFill(){api} in "true" to enable the {api:anychart.core.stock.Plot#hatchFillPalette}.hatchFillPalette(){api}.
+
+```
+thirdSeries.hatchFill(true);
+```
+
+{sample}STOCK\_Plots\_06{sample}
+
+Palette methods can also be used as getters. Look at the next sample:
+
+```
+// create the first palette
+firstPlot.palette(["#827717", "#c77532"]);
+    
+// get the palette of the first plot and set it for the second
+firstPlotPalette = firstPlot.palette();
+secondPlot.palette(firstPlotPalette);
+```
+
+{sample}STOCK\_Plots\_077{sample}

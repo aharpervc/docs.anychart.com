@@ -1,0 +1,92 @@
+<html>
+<head>
+  <meta name="x-cat-tags" content="anyChart"/>
+    <meta charset="UTF-8"/>
+    <meta name="tags" content="[]"/>
+    <meta name="index" content="1000"/>
+    <meta name="is-new" content="false"/>
+    <script src="../anychart-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css"/>
+    <script x-export="chart">anychart.onDocumentReady(function () {
+
+    // create data table on loaded data
+    var dataTable = anychart.data.table();
+    dataTable.addData([
+['2004-01-02', 2011.08, 2022.37, 1999.77, 2006.6801, 2020],
+['2004-01-05', 2020.78, 2047.36, 2020.78, 2047.36, 2040],
+['2004-01-06', 2044.55, 2061.54, 2039.63, 2057.3701, 2060],
+['2004-01-07', 2056.75, 2078.0901, 2047.02, 2077.6799, 2080],
+['2004-01-08', 2089.6001, 2100.25, 2078.05, 2100.25, 2100],
+['2004-01-09', 2083.6399, 2113.3301, 2077.0901, 2086.9199, 2110],
+['2004-01-12', 2093.54, 2112.52, 2085.1499, 2111.78, 2120],
+['2004-01-13', 2113.1101, 2114.9099, 2080.29, 2096.4399, 2120],
+['2004-01-14', 2104.29, 2111.73, 2094.3201, 2111.1299, 2110],
+['2004-01-15', 2101.8601, 2121.6101, 2088.1001, 2109.0801, 2120],
+['2004-01-16', 2126.1201, 2140.47, 2119.3501, 2140.46, 2140],
+['2004-01-20', 2149.03, 2149.8501, 2130.2, 2147.98, 2150],
+['2004-01-21', 2139.3301, 2150.1101, 2120.2, 2142.45, 2150],
+['2004-01-22', 2146.3201, 2152.1201, 2119.01, 2119.01, 2160],
+['2004-01-23', 2124.76, 2138.4099, 2108.45, 2123.8701, 2160],
+['2004-01-26', 2120.5601, 2153.8301, 2115.3401, 2153.8301, 2160],
+['2004-01-27', 2148.05, 2152.75, 2116.04, 2116.04, 2150],
+['2004-01-28', 2125.02, 2128, 2073.1499, 2077.3701, 2150],
+['2004-01-29', 2085.54, 2087.3301, 2041.0699, 2068.23, 2100],
+['2004-01-30', 2068.3601, 2078.8799, 2058.54, 2066.1499, 2100]
+    ]);
+
+    // map loaded data
+    var openLineMapping = dataTable.mapAs({'value': 1});
+    var closeLineMapping = dataTable.mapAs({'value': 4});
+    var rangeColumnMapping = dataTable.mapAs({'high': 2, 'low': 3});
+
+    // create stock chart
+    chart = anychart.stock();
+    chart.title("ACME Corp. Stock Prices");
+
+    // create first plot on the chart with column series
+    var firstPlot = chart.plot(0);
+    firstPlot.bounds(0, 0, "100%", "45%");
+    firstPlot.grid(1).enabled(true).layout('vertical');
+    firstPlot.minorGrid().enabled(true);
+    firstPlot.minorGrid(1).enabled(true).layout('vertical');
+
+    // create second plot on the chart
+    var secondPlot = chart.plot(1);
+    // turn on second plot grids
+    secondPlot.grid().enabled(true);
+    secondPlot.width("100%");
+    secondPlot.height("45%");
+    secondPlot.top("50%");
+    secondPlot.grid(1).enabled(true).layout('vertical');
+    secondPlot.grid().enabled(true);
+    secondPlot.minorGrid(1).enabled(true).layout('vertical');
+
+    // create first line series on the first plot
+    var firstSeries = firstPlot.line(openLineMapping);
+    firstSeries.name("Open rates");
+    
+    // create second line series on the first plot
+    var secondSeries = firstPlot.line(closeLineMapping);
+    secondSeries.name("Close rates");
+
+    // create range column series on the second plot
+    var thirdSeries = secondPlot.rangeColumn(rangeColumnMapping);
+    // set width for columns in percent
+    thirdSeries.name("High-Low");
+    thirdSeries.hatchFill(true);
+    
+    // using palettes
+    firstPlot.palette(["#827717", "#c77532"]);
+    secondPlot.hatchFillPalette(["divot"]);
+
+    // set container id for the chart
+    chart.container('container');
+
+    // initiate chart drawing
+    chart.draw();
+    });</script>
+</head>
+<body>
+<div id="container" style="width: 100%; height: 100%"></div>
+</body>
+</html>

@@ -148,7 +148,7 @@ paginator.orientation("right");
 
 ### Marker Symbol
 
-When you are working with line and spline chart you may use markers to distinguish different series. By default AnyChart charting library shows marker symbols in legend - only color representation is used in a small line icon. If you want to tune markers in legend icons you have to adjust {api:anychart.core.ui.LegendItem}**legendItem(){api} method. Sample code presented below.
+When you work with line and spline chart you may use markers to distinguish different series. By default AnyChart charting library shows marker symbols in legend - only color representation is used in a small line icon. To tune markers in legend icons, adjust {api:anychart.core.ui.LegendItem}.legendItem(){api} method. Sample of the code is presented below.
 
 ```
 // chart data 
@@ -164,7 +164,7 @@ item.iconMarkerFill("gold");
 // set border of icon marker
 item.iconMarkerStroke("red");
 // set type of icon marker
-item.iconMarkerType("star6");
+item.iconType("star6");
 ```
 
 Here is a sample with different settings for a marker of legend item.
