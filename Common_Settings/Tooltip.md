@@ -264,13 +264,26 @@ That is how the sample with the code from above looks like:
 In some cases you may need to display a tooltip for a couple of moments after a point was unhovered. Use {api:anychart.core.ui.SeriesTooltip#hideDelay}**hideDelay()**{api} method to set timer to display tooltip a bit longer.
 
 ```
-  // tooltip settings
-  var tooltip = series.tooltip();
-  // set delay time in milliseconds
-  tooltip.hideDelay(1000);
+// make tooltips hide with delay on a click
+tooltip1.hideDelay(1000);
+tooltip2.hideDelay(3000);
 ```
 
 {sample}CS\_Tooltip\_16{sample}
+
+Note that if you hover any other object on a chart or leave the chart bounds while the hiding delay time is not over, tooltips will disappear automatically.
+
+To ignore the tooltips hide delay, use {api:anychart.utils#hideTooltips}anychart.utils.hideTooltips(){api} and set it as "true". 
+
+```
+// make tooltips hide on a click ingoring the hide delay
+chart.listen("click", function(){
+    anychart.utils.hideTooltips("true");
+});
+```
+
+{sample}CS\_Tooltip\_17{sample}
+
 
 ### Themes
 
@@ -304,4 +317,4 @@ Tooltips can be adjusted using AnyChart Themes. Themes makes it possible to set 
 
 Settings for the tooltip in the sample below were applied using themes. Click "launch in playground" to see how settings for tooltip can be applied using AnyChart themes.
 
-{sample}CS\_Tooltip\_17{sample}
+{sample}CS\_Tooltip\_18{sample}

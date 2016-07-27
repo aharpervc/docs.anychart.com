@@ -49,7 +49,7 @@
   // settings for the series item in legend
   var legendItems3 = series3.legendItem();
   // series marker type in legend
-  legendItems3.iconMarkerType("star5");
+  legendItems3.iconType("marker");
   
   // set series data
   var series4 = chart.line([
@@ -67,9 +67,12 @@
   // set border of icon marker in legend
   legendItems4.iconMarkerStroke("red");
   // set type of icon marker in legend
-  legendItems4.iconMarkerType("star6");
+  legendItems4.iconType("star6");
   
   chart.title("Tuning Marker of legend item");
+  
+  // disable tooltips
+  chart.tooltip().textFormatter(false);
   
   // draw chart
   chart.container("container");
