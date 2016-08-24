@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css"/>
     <script x-export="chart">anychart.onDocumentReady(function() {
       
-      tooltip = $("<div></div>").css({"position": "absolute", "pointerEvents": "none"});
+      tooltip = $("<div></div>").css({"position": "fixed", "pointerEvents": "none"});
       $("body").append(tooltip);
 
       // data
@@ -52,8 +52,8 @@
         var containerOffset = container.offset();
         var scrollLeft = $(document).scrollLeft();
         var scrollTop = $(document).scrollTop();
-        var x = clientX - (containerOffset.left + scrollLeft);
-        var y = clientY - (containerOffset.top + scrollTop);
+        var x = clientX - (containerOffset.left - scrollLeft);
+        var y = clientY - (containerOffset.top - scrollTop);
         console.log(y+"; "+ clientY);
         tooltip.css({"left": x+20, "top": y+10});
       });
