@@ -52,8 +52,8 @@
         var containerOffset = container.offset();
         var scrollLeft = $(document).scrollLeft();
         var scrollTop = $(document).scrollTop();
-        var x = clientX - (containerOffset.left - scrollLeft);
-        var y = clientY - (containerOffset.top - scrollTop);
+        var x = clientX - (containerOffset.left + scrollLeft);
+        var y = clientY - (containerOffset.top + scrollTop);
         console.log(y+"; "+ clientY);
         tooltip.css({"left": x+20, "top": y+10});
       });
