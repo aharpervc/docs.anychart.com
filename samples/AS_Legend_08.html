@@ -49,7 +49,7 @@
   // settings for the series item in legend
   var legendItems3 = series3.legendItem();
   // series marker type in legend
-  legendItems3.iconType("marker");
+  legendItems3.iconType("line");
   
   // set series data
   var series4 = chart.line([
@@ -62,12 +62,8 @@
   series4.markers(true);
   // settings for the legend item of the series
   var legendItems4 = series4.legendItem();
-  // set inner color of series marker in legend
-  legendItems4.iconMarkerFill("gold");
-  // set border of icon marker in legend
-  legendItems4.iconMarkerStroke("red");
   // set type of icon marker in legend
-  legendItems4.iconType("star6");
+  legendItems4.iconType("line");
   
   chart.title("Tuning Marker of legend item");
   
