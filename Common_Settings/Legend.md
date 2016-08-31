@@ -99,7 +99,7 @@ As an addition to the {api:anychart.core.ui.Legend#position}position(){api} meth
 
 {sample}AS\_Legend\_04{sample}
 
-*Note:* possible values that can be passed to the {api:anychart.core.ui.Legend#align}align(){api} method are: *Left, Right, Top, Bottom and Center*. Also, possible values depend on the {api:anychart.core.ui.Legend#position}**.position(){api} parameter. With *Top* and *Bottom* legend position it is possible to use *Left, Right* and *Center* parameters of {api:anychart.core.ui.Legend#align}align(){api}. For *Left* and *Right* values of {api:anychart.core.ui.Legend#position}position(){api} it's possible to use *Top, Bottom* and *Center* parameters of {api:anychart.core.ui.Legend#align}align(){api} method.
+*Note:* possible values that can be passed to the {api:anychart.core.ui.Legend#align}align(){api} method are: *Left, Right, Top, Bottom and Center*. Also, possible values depend on the {api:anychart.core.ui.Legend#position}position(){api} parameter. With *Top* and *Bottom* legend position it is possible to use *Left, Right* and *Center* parameters of {api:anychart.core.ui.Legend#align}align(){api}. For *Left* and *Right* values of {api:anychart.core.ui.Legend#position}position(){api} it's possible to use *Top, Bottom* and *Center* parameters of {api:anychart.core.ui.Legend#align}align(){api} method.
 
 ## Visualization
 
@@ -129,7 +129,7 @@ Here is a sample with adjusted legend size
 
 {sample}AS\_Legend\_06{sample}
 
-*Note:* the space between data plot and legend is controlled using {api:anychart.core.ui.Legend#padding}**padding(){api} method.
+*Note:* the space between data plot and legend is controlled using {api:anychart.core.ui.Legend#padding}padding(){api} method.
 
 ### Paging
 
@@ -148,7 +148,7 @@ paginator.orientation("right");
 
 ### Marker Symbol
 
-When you work with line and spline chart you may use markers to distinguish different series. By default AnyChart charting library shows marker symbols in legend - only color representation is used in a small line icon. To tune markers in legend icons, adjust {api:anychart.core.ui.LegendItem}.legendItem(){api} method. Sample of the code is presented below.
+When you work with line and spline chart you may use markers to distinguish different series. By default AnyChart charting library shows marker symbols in legend - only color representation is used in a small line icon. To tune markers in legend icons, adjust {api:anychart.core.ui.LegendItem}legendItem(){api} method. Sample of the code is presented below.
 
 ```
 // chart data 
@@ -185,7 +185,7 @@ You can easily control series of the chart using chart legend. You can hide and 
 
 ## Custom Item
 
-When creating legend you can add your own items with any information you want to see on the legend, to do that use {api:anychart.ui.Legend#itemsFormatter}**itemsFormatter(){api} method. 
+When creating legend you can add your own items with any information you want to see on the legend, to do that use {api:anychart.ui.Legend#itemsFormatter}itemsFormatter(){api} method. 
 
 ```
 var legend = chart.legend();

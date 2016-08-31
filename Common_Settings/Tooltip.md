@@ -246,7 +246,7 @@ That is how the sample with the code from above looks like:
 
 ## Hide
 
-IF you need to hide the tooltip for some reasons, use {api:anychart.core.ui.Tooltip#hide}.hide(){api} method. Tooltips can be hidden for the whole chart or for a discrete series. 
+IF you need to hide the tooltip for some reasons, use {api:anychart.core.ui.Tooltip#hide}hide(){api} method. Tooltips can be hidden for the whole chart or for a discrete series. 
 
 ```
 // make tooltips hide on a click
@@ -305,7 +305,6 @@ Tooltips can be adjusted using AnyChart Themes. Themes makes it possible to set 
             "anchor": "bottomCenter",
             "position": "topCenter",
             "offsetX": 0,
-            "hideDelay": 3000,
             "fontFamily": "Menlo",
             "fontSize": 14
           }
