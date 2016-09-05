@@ -46,7 +46,7 @@ chart.legend(true);
 
 In the live sample, please notice that when you move the mouse over the series name in legend - all series elements are highlighted
 
-{sample}AS\_Legend\_01{sample}
+{sample}CS\_Legend\_01{sample}
 
 ## Easy Auto Legend for Single Series Charts
 
@@ -62,7 +62,7 @@ legend.itemsSourceMode("categories");
 
 To create a legend for single series chart you just have to set **categories** value for {api:anychart.core.ui.Legend#itemsSourceMode}itemsSourceMode(){api}.
 
-{sample}AS\_Legend\_02{sample}
+{sample}CS\_Legend\_02{sample}
 
 ## Title
 
@@ -90,7 +90,7 @@ title.hAlign("center");
 
 Here is a sample bar chart and the legend has tuned title:
 
-{sample}AS\_Legend\_03{sample}
+{sample}CS\_Legend\_03{sample}
 
 ## Positioning
 
@@ -98,7 +98,7 @@ Depending on the layout and type of your chart you can position legend to a desi
 
 As an addition to the {api:anychart.core.ui.Legend#position}position(){api} method, method {api:anychart.core.ui.Legend#align}align(){api} controls legend alignment.
 
-{sample}AS\_Legend\_04{sample}
+{sample}CS\_Legend\_04{sample}
 
 *Note:* possible values that can be passed to the {api:anychart.core.ui.Legend#align}align(){api} method are: *Left, Right, Top, Bottom and Center*. Also, possible values depend on the {api:anychart.core.ui.Legend#position}position(){api} parameter. With *Top* and *Bottom* legend position it is possible to use *Left, Right* and *Center* parameters of {api:anychart.core.ui.Legend#align}align(){api}. For *Left* and *Right* values of {api:anychart.core.ui.Legend#position}position(){api} it's possible to use *Top, Bottom* and *Center* parameters of {api:anychart.core.ui.Legend#align}align(){api} method.
 
@@ -110,7 +110,7 @@ As far as a legend is a part of a chart, its appearance should be tuned properly
 
 Legend background allows you to configure the border and the inner color of the legend. Method {api:anychart.core.ui.Legend#background}background(){api} controls background visual appearance. To learn more about background setting please study the [background tutorial](Background).
 
-{sample}AS\_Legend\_05{sample}
+{sample}CS\_Legend\_05{sample}
 
 ### Size
 
@@ -128,7 +128,7 @@ legend.width(95);
 
 Here is a sample with adjusted legend size
 
-{sample}AS\_Legend\_06{sample}
+{sample}CS\_Legend\_06{sample}
 
 *Note:* the space between data plot and legend is controlled using {api:anychart.core.ui.Legend#padding}padding(){api} method.
 
@@ -145,7 +145,7 @@ paginator.layout("vertical");
 paginator.orientation("right");
 ```
 
-{sample}AS\_Legend\_07{sample}
+{sample}CS\_Legend\_07{sample}
 
 ### Icon Type
 
@@ -163,7 +163,7 @@ var legendItems4 = series4.legendItem();
 // set type of icon marker in legend
 legendItems4.iconType("line");
 ```
-{sample}AS\_Legend\_08{sample}
+{sample}CS\_Legend\_08{sample}
 
 The {api:anychart.core.utils.LegendItemSettings#iconType}iconType(){api} method makes legend items look the same as their series markers. Setting the icon type through this method allows to define different icon types for different legend items om the same chart; though, it's possible to set one legend item for the whole chart by setting a theme.
 
@@ -183,12 +183,12 @@ themeSettings = {
   anychart.theme(themeSettings);
 ```
 
-{sample}AS\_Legend\_09{sample}
+{sample}CS\_Legend\_09{sample}
 
 
 ### Marker Symbol
 
-It's possible to make legend items demonstrate markers of the series by setting "marker" to the {api:anychart.core.utils.LegendItemSettings#iconType}iconType(){api} method. This makes a default legend item transform into a marker of its series. This method is also used for setting a custom legend item icon. Look through the following sample.
+It's possible to make legend items demonstrate markers of the series or onle the series symbol (works for line, spline, stepline). Set "line" to the {api:anychart.core.utils.LegendItemSettings#iconType}iconType(){api} method to demonstrate only the series symbol independant on the markers enabled for the series. 
 
 ```
 var legendItems3 = series3.legendItem();
@@ -207,19 +207,27 @@ item.iconType("star6");
 
 Here is a sample with different settings for a marker of legend item.
 
-{sample}AS\_Legend\_10{sample}
+{sample}CS\_Legend\_10{sample}
+
+There is another way to set all legend items to show the type of the series - setting the theme does the same as above, but there is no need in setting the icon type for each series.
+
+
+Setting "marker" to the {api:anychart.core.utils.LegendItemSettings#iconType}iconType(){api} method leads to default legend items transforming into marker of their series. This method is also used for setting a custom legend item icon. Look through the following sample.
+
+
+It's also possible to set a custom legend item icon - different from the markers used for its series and different from the series type icon. 
 
 ### Tooltip
 
 If you want to configure legend tooltips - you should do that using {api:anychart.core.ui.Legend#tooltip}tooltip(){api} methods. You can tune its visual appearance and format. In the following sample we will format tooltips of the legend to show detailed description information.
 
-{sample}AS\_Legend\_11{sample}
+{sample}CS\_Legend\_11{sample}
 
 ## Series Management
 
 You can easily control series of the chart using chart legend. You can hide and show any of the series by clicking on the legend items. Here is a sample of column chart with four series. One of the series is already disabled. Click on the last legend item to show hidden series. 
 
-{sample}AS\_Legend\_12{sample}
+{sample}CS\_Legend\_12{sample}
 
 ## Custom Item
 
@@ -241,13 +249,13 @@ legend.itemsFormatter(function(items){
 
 In the sample chart below we've used custom item that adds *Total* data to legend.
 
-{sample}AS\_Legend\_13{sample}
+{sample}CS\_Legend\_13{sample}
 
 ## Custom Legend
 
 AnyChart JavaScript Framework sets no limits to the amount of legends on one chart plot. Legend can be a part chart as well as a separate unit. Sample below demonstrates three custom legend at the bottom of the chart. 
 
-{sample}AS\_Legend\_14{sample}
+{sample}CS\_Legend\_14{sample}
 
 ## One Legend for Several Charts
 
@@ -264,7 +272,7 @@ var legend = anychart.ui.legend();
 legend.itemsSource([chart2005, chart2006]);
 ```
 
-{sample}AS\_Legend\_15{sample}
+{sample}CS\_Legend\_15{sample}
 
 ## One Legend for Several Series
 
@@ -286,4 +294,4 @@ legend.listen("legendItemClick", function(event) {
 
 Sample below demonstrate managing several series with one legend item.
 
-{sample}AS\_Legend\_16{sample}
+{sample}CS\_Legend\_16{sample}
