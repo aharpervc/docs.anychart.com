@@ -20,7 +20,7 @@
     {x: "Jake", value: 12000},
     {x: "Peter", value: 16000}
   ]);
-  series1.name("default markers");
+  series1.name("Default icon");
   series1.markers(true);
   
   // set series data
@@ -30,12 +30,13 @@
     {x: "Peter", value: 17000}
   ]);
   // set series name
-  series2.name("Custom series marker");
+  series2.name("Default icon");
   // adjust series marker
   var markers2 = series2.markers();
   // series marker type
-  markers2.type("star4");
   markers2.enabled(true);
+  // series marker type in legend
+  series2.legendItem().iconType("marker");
   
   // set series data
   var series3 = chart.line([
@@ -44,12 +45,8 @@
     {x: "Peter", value: 21000}
   ]);
   // series name
-  series3.name("custom legend marker type");
+  series3.name("Marker icon");
   series3.markers(true);
-  // settings for the series item in legend
-  var legendItems3 = series3.legendItem();
-  // series marker type in legend
-  legendItems3.iconType("line");
   
   // set series data
   var series4 = chart.line([
@@ -58,7 +55,7 @@
     {x: "Peter", value: 22000}
   ]);
   // set series name
-  series4.name("customised legend marker");
+  series4.name("Line icon");
   series4.markers(true);
   // settings for the legend item of the series
   var legendItems4 = series4.legendItem();
@@ -68,7 +65,7 @@
   chart.title("Tuning Marker of legend item");
   
   // disable tooltips
-  chart.tooltip().textFormatter(false);
+  chart.tooltip(false);
   
   // draw chart
   chart.container("container");

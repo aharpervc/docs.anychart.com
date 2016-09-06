@@ -8,7 +8,29 @@
     <script src="../anychart-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css"/>
     <script x-export="chart">anychart.onDocumentReady(function() {
+  themeSettings = {
+    "line": {
+        "defaultSeriesSettings": {
+            "line": {
+                "legendItem": {
+                    "iconType": "line"
+                }
+            },
+            "spline": {
+                "legendItem": {
+                    "iconType": "spline"
+                }
+            },
+            "stepline": {
+                "legendItem": {
+                    "iconType": "stepline"
+                }
+            }
+        }
+    }
+  };
 
+  anychart.theme(themeSettings);
   // set chart type
   chart = anychart.line();
   
@@ -21,7 +43,6 @@
     {x: "Peter", value: 16000}
   ]);
   series1.markers(true);
-  series1.legendItem().iconType("line");
   
   // set series data
   var series2 = chart.line([
@@ -33,7 +54,6 @@
   series2.markers(true);
   // adjust series marker
   series2.markers().enabled(true);
-  series2.legendItem().iconType("line");
   
   // set series data
   var series3 = chart.line([
@@ -45,12 +65,8 @@
   series3.markers(true);
   // adjust series marker
   series3.markers().enabled(true);
-  series3.legendItem().iconType("line");
   
   chart.title("Tuning Marker of legend item");
-  
-  // disable tooltips
-  chart.tooltip(false);
   
   // draw chart
   chart.container("container");

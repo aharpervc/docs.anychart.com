@@ -15,39 +15,31 @@
   chart.legend(true);
   
   // series data and series name
-  var series1 = chart.line([
+  var series1 = chart.spline([
     {x: "John", value: 10000},
     {x: "Jake", value: 12000},
-    {x: "Peter", value: 16000}
+    {x: "Peter", value: 16000},
+    {x: "Mary", value: 11000},
+    {x: "Alex", value: 17000}
   ]);
   series1.markers(true);
-  series1.legendItem().iconType("line");
+  series1.legendItem().iconType("marker");
   
   // set series data
-  var series2 = chart.line([
+  var series2 = chart.spline([
     {x: "John", value: 12000},
     {x: "Jake", value: 15000},
-    {x: "Peter", value: 17000}
+    {x: "Peter", value: 17000},
+    {x: "Mary", value: 11000},
+    {x: "Alex", value: 10000}
   ]);
   // set series name
   series2.markers(true);
   // adjust series marker
   series2.markers().enabled(true);
-  series2.legendItem().iconType("line");
+  series2.legendItem().iconType("marker");
   
-  // set series data
-  var series3 = chart.line([
-    {x: "John", value: 20000},
-    {x: "Jake", value: 19000},
-    {x: "Peter", value: 21000}
-  ]);
-  // series name
-  series3.markers(true);
-  // adjust series marker
-  series3.markers().enabled(true);
-  series3.legendItem().iconType("line");
-  
-  chart.title("Tuning Marker of legend item");
+  chart.title("Tuning Markers of Legend Items");
   
   // disable tooltips
   chart.tooltip(false);

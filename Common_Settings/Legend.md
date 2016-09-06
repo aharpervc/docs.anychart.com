@@ -156,7 +156,7 @@ In the sample below there are four line series, which markers are set of differe
 ```
 var legendItems3 = series3.legendItem();
 // series marker type in legend
-legendItems3.iconType("line");
+legendItems3.iconType("marker");
 
 // settings for the legend item of the series
 var legendItems4 = series4.legendItem();
@@ -188,34 +188,26 @@ themeSettings = {
 
 ### Marker Symbol
 
-It's possible to make legend items demonstrate markers of the series or onle the series symbol (works for line, spline, stepline). Set "line" to the {api:anychart.core.utils.LegendItemSettings#iconType}iconType(){api} method to demonstrate only the series symbol independant on the markers enabled for the series. 
+Setting "marker" to the {api:anychart.core.utils.LegendItemSettings#iconType}iconType(){api} method leads to default legend items transforming into markers of their series. This method is also used for setting a custom legend item icon. Look through the following sample.
 
 ```
-var legendItems3 = series3.legendItem();
-// series marker type in legend
-legendItems3.iconType("marker");
-
-// settings for legend item of the series
-var item = series.legendItem()
-// set inner color of icon marker
-item.iconMarkerFill("gold");
-// set border of icon marker
-item.iconMarkerStroke("red");
-// set type of icon marker
-item.iconType("star6");
+series1.markers(true);
+series1.legendItem().iconType("marker");
 ```
 
-Here is a sample with different settings for a marker of legend item.
-
-{sample}CS\_Legend\_10{sample}
-
-There is another way to set all legend items to show the type of the series - setting the theme does the same as above, but there is no need in setting the icon type for each series.
+{sample}CS\_Legend\_10\_3{sample}
 
 
-Setting "marker" to the {api:anychart.core.utils.LegendItemSettings#iconType}iconType(){api} method leads to default legend items transforming into marker of their series. This method is also used for setting a custom legend item icon. Look through the following sample.
+It's also possible to set a custom legend item icon - different from the markers used for its series and different from the series type icon.
 
+```
+series1.markers("circle");
+series1.stroke("#000");
+series1.legendItem().iconType("cross");
+series1.legendItem().iconMarkerFill("#000");
+```
 
-It's also possible to set a custom legend item icon - different from the markers used for its series and different from the series type icon. 
+{sample}CS\_Legend\_10\_4{sample} 
 
 ### Tooltip
 
