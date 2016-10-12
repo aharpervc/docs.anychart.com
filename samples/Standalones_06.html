@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="tags" content="[]"/>
+<meta name="index" content="1000"/>
+<meta name="is-new" content="false"/>
+<script src="../anychart-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css"/>
+<script x-export="chart">anychart.onDocumentReady(function() {
+// set the stage
+stage = anychart.graphics.create("container");
+
+// create axes and adjust them
+yAxis = anychart.standalones.axes.linear();
+yAxis.orientation("left");
+yAxis.padding().left(30);
+yAxis.padding().bottom(58);
+xAxis = anychart.standalones.axes.linear();
+xAxis.orientation("bottom");
+xAxis.padding().bottom(30);
+xAxis.padding().left(67);
+xAxis.padding().right("40%");
+
+// add scale
+yAxis.scale(anychart.scales.linear());
+xAxis.scale(anychart.scales.linear());
+
+// put axes on a stage
+yAxis.container(stage);
+yAxis.draw();
+xAxis.container(stage);
+xAxis.draw();
+});</script>
+</head>
+<body>
+<div id="container" style="width: 100%; height: 100%"></div>
+</body>
+</html>
