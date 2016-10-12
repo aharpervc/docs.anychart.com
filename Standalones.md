@@ -86,7 +86,60 @@ A Polar Axis
 A Radar Axis
 </td>
 </tr>
+
+<tr>
+<td>
+{api:anychart.standalones.axisMarkers.line}Line{api}
+</td>
+<td>
+An axis marker of a Line type
+</td>
+</tr>
+
+<tr>
+<td>
+{api:anychart.standalones.axisMarkers.Radar}Radar{api}
+</td>
+<td>
+An axis marker of a Radar type
+</td>
+</tr>
+
+<tr>
+<td>
+{api:anychart.standalones.axisMarkers.Radar}Text{api}
+</td>
+<td>
+An axis marker of a Text type
+</td>
+</tr>
+
+<tr>
+<td>
+{api:anychart.standalones.grids.linear}Linear{api}
+</td>
+<td>
+A Linear grid
+</td>
+</tr>
+<tr>
+<td>
+{api:anychart.standalones.grids.polar}Polar{api}
+</td>
+<td>
+A Polar grid
+</td>
+</tr>
+<tr>
+<td>
+{api:anychart.standalones.grids.radar}Radar{api}
+</td>
+<td>
+A Radar grid
+</td>
+</tr>
 </table>
+
 
 
 ## Using Standalones
@@ -193,3 +246,4 @@ As you can notice, there are more standalone elements that can be used in a char
 ```
 
 {sample}Standalones\_08{sample}
+
