@@ -189,6 +189,17 @@ chart.width("80%");
 
 {sample}Standalones\_04{sample}
 
+There are more standalone elements you can use. Let's try a Label element and add some description text. Also you can use {api:anychart.standalones.grids.linear}a linear standalone grid{api} in the chart.
+
+```
+// set chart width
+chart.width("80%");
+```
+
+{sample}Standalones\_05{sample}
+
+
+
 You can notice that this sample now looks more like a dashboard. So, using standalones is one of the ways to create dashboards.
 
 That is how standalone elements can be used within charts. Now, let's create a chart fully based on standalone & graphics elements.
@@ -215,7 +226,7 @@ yAxis.container(stage);
 yAxis.draw();
 ```
 
-{sample}Standalones\_05{sample}
+{sample}Standalones\_07{sample}
 
 Now, let's make the axis vertical as it is befits to the Y-Axis, and create the X-Axis with adjusting both of them.
 
@@ -229,7 +240,7 @@ xAxis.padding().left(67);
 xAxis.scale(anychart.scales.linear());
 ```
 
-{sample}Standalones\_06{sample}
+{sample}Standalones\_08{sample}
 
 Now it is the time to use Graphics JS to add some elements imitating chart points and a grid. Let's make it a Column Chart with two series.
 
@@ -237,7 +248,7 @@ Now it is the time to use Graphics JS to add some elements imitating chart point
 
 ```
 
-{sample}Standalones\_07{sample}
+{sample}Standalones\_09{sample}
 
 As you can notice, there are more standalone elements that can be used in a chart or a dashboard. Let's add text elements and a table to make the sample look more like a dashboard.
 
@@ -245,5 +256,5 @@ As you can notice, there are more standalone elements that can be used in a char
 
 ```
 
-{sample}Standalones\_08{sample}
+{sample}Standalones\_10{sample}
 
