@@ -55,18 +55,6 @@ anychart.onDocumentReady(function () {
         chart.drillTo(e.point.get("id"), txMap);
     });
 
-    // listen for draw event and update path in a title
-    chart.listen("chartDraw",function(){
-      // get drilldown path
-      var path = chart.getDrilldownPath();
-      
-      // get link to the current chart
-      var cv = path[path.length - 1].getCurrentChart();
-      
-      // update path in the title of appropriate instance
-      cv.title(printPath(path))
-    });
-
     // create drill up label
     drillToLabel = createLabel("Drill Up", 0, function() {
       // Drill down to the specified item.
@@ -85,14 +73,14 @@ function printPath(path){
     var text = "World";
     // go through the next levels
     for (i = 1; i <  path.length; i++) { 
-                text +=  " -> " + path[i].getProperties().name;
+        text +=  " -> " + path[i].getProperties().name;
     }
     return text;
 }
 
 // helper function to create buttons
 function createLabel(text, offset, action){
-    var label = anychart.ui.label();
+    var label = anychart.standalones.Label();
     label.background({fill: "#9E9E9E"});
     label.zIndex(1000);
     label.text(text);
@@ -103,9 +91,7 @@ function createLabel(text, offset, action){
     label.container(stage);
     label.draw();
     return label;
-}
-
-    
+}    
 </script>
 </body>
 </html>

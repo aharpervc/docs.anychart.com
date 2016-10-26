@@ -47,33 +47,13 @@ chart.padding().top(50);
 // set chart width
 chart.width("65%");
 
-// create a standalone legend
-legend = anychart.standalones.legend();
-legend.itemsLayout("horizontal");
-centerpoint = chart.width()/2 - 200;
-legend.padding().top(50);
-legend.parentBounds(100, centerpoint, 400, 600);
-legend.items([
-    {index: 0, text: "Kansas", iconFill: "#64b5f6"},
-    {index: 1, text: "Florida", iconFill: "#1976d2"},
-    {index: 2, text: "Arizona", iconFill: "#ef6c00"},
-    {index: 3, text: "Washington", iconFill: "#ffd54f"},
-    {index: 4, text: "Massachusetts", iconFill: "#455a64"},
-    {index: 5, text: "Texas", iconFill: "#96a6a6"},
-    {index: 6, text: "Iowa", iconFill: "#dd2c00"}
-]);
-
-legend.listen("click", function(){
-    console.log(this);
-});
-
-legend.zIndex(1000000);
-legend.container(stage); // sets container
-legend.draw();
+// create a standalone axis
+axisNew = anychart.standalones.axes.linear();
+axisNew.scale(anychart.scales.ordinal());
 
 // create a text block
 label = anychart.standalones.label();
-label.text("Adding a standalone legend");
+label.text("This is the label");
 
 // put the table on a stage and draw it
 label.container(stage);

@@ -142,22 +142,6 @@
   chart2005.yAxis().title().enabled(false);
   chart2006.yAxis().title().enabled(false);
   
-  // redraw legend if the first chart is redrawn
-  chart2005.listen(
-    "chartDraw",
-    function (){
-      // define legend bounds
-      var legendBounds = anychart.math.rect(
-        0,
-        0,
-        chart2005.container().width(),
-        chart2005.container().height()
-      );
-      
-      // set bounds and draw legend
-      legend.parentBounds(legendBounds).draw();
-    });
-  
   chart2005.container(stage).draw();
   chart2006.container(stage).draw();
 });</script>

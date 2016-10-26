@@ -23,7 +23,7 @@
   stage = anychart.graphics.create("container");
 
   // setting basic title
-  var mainTitle = anychart.ui.title();
+  var mainTitle = anychart.standalones.Title();
   mainTitle.parentBounds(0, 0, stage.width(), stage.height()*0.1);
   mainTitle.text("Stacked Modes Samples");
   mainTitle.container(stage);
@@ -64,7 +64,7 @@
   // second chart
   var percentStackedMode = anychart.column();
 
-  percentStackedMode.title("Percent Tacked Mode");
+  percentStackedMode.title("Percent Stacked Mode");
 
   // setting chart's size and position
   percentStackedMode.bounds("50%", "15%", "50%", "85%");

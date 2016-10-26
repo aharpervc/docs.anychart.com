@@ -9,19 +9,19 @@
     <script x-export="chart">anychart.onDocumentReady(function() {
 
     stage = anychart.graphics.create("container");
-    anychart.ui.background()
+    anychart.standalones.Background()
         .fill("none")
         .stroke("5 orange .7")
         .bounds(anychart.math.rect(22, 18, stage.width() - 44, stage.height() / 3 - 22))
         .container(stage)
         .draw();
-    anychart.ui.background()
+    anychart.standalones.Background()
         .fill("none")
         .stroke(["red", "blue"], 15)
         .bounds(anychart.math.rect(22, stage.height() / 3 + 18, stage.width() - 44, stage.height() / 3 - 22))
         .container(stage)
         .draw();
-    anychart.ui.background()
+    anychart.standalones.Background()
         .fill("none")
         .stroke({
           keys: [".1 red", "white"],

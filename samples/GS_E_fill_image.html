@@ -13,7 +13,7 @@
             .moveTo(stage.width() / 2, 0)
             .lineTo(stage.width() / 2, stage.height());
     stage.text(20, 0, "Stretch image");
-    anychart.ui.background()
+    anychart.standalones.Background()
             .fill({
                 src: "http://static.anychart.com/images/kitty.png",
                 mode: acgraph.vector.ImageFillMode.STRETCH
@@ -23,7 +23,7 @@
             .container(stage)
             .draw();
     stage.text(stage.width() / 2 + 20, 0, "Pattern image");
-    anychart.ui.background()
+    anychart.standalones.Background()
             .fill({
                 src: "http://static.anychart.com/images/kitty.png",
                 mode: acgraph.vector.ImageFillMode.TILE

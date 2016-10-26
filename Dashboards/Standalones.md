@@ -3,7 +3,15 @@
 * [Overview](#overview)
 * [Standalones List](#standalones_list)
 * [Using Standalones](#using_standalones)
+ * [Scales](#scales)
+ * [Legend](#legend)
+ * [Axes](#axes)
+ * [ColorRange](#colorrange)
+ * [DataGrid](#datagrid)
+ * [TimeLine](#timeline)
+ * [ResourceList](#resourcelist)
 * [Custom Chart with Standalones](#custom_chart_with_standalones)
+
 
 ## Overview
 
@@ -198,9 +206,60 @@ chart.width("80%");
 
 {sample}Standalones\_05{sample}
 
-
-
 You can notice that this sample now looks more like a dashboard. So, using standalones is one of the ways to create dashboards.
+
+Below you can find several sample adding standalone elements to the chart.
+
+### Scales
+
+It is possible to create a scale separately from the chart and then use them together.
+
+```
+// create a standalone scale
+scaleNew = anychart.standalones.scale();
+```
+а шкал standalone нет
+
+### Legend
+
+It is possible to create a custom standalone legend and edit it in a way you need it to behave.
+
+```
+// create a standalone legend
+legend = anychart.standalones.legend();
+```
+
+{sample}Standalones\_06{sample}
+
+You can see that those legend have neither color nor connection to the series of the chart. Let's add the colors to the legend due to the series and make it to select all points of the selected series instead of disabling it. To set the colors to the icons, use the {api:anychart.core.ui.LegendItem#iconFill}iconFill(){api} method
+
+```
+// create a standalone legend
+legend = anychart.standalones.legend();
+```
+
+{sample}Standalones\_07{sample}
+
+### Axes
+
+8
+
+### ColorRange
+
+9
+
+### DataGrid
+
+10
+
+### TimeLine
+
+11
+
+### ResourceList
+
+12
+
 
 That is how standalone elements can be used within charts. Now, let's create a chart fully based on standalone & graphics elements.
 
@@ -226,7 +285,7 @@ yAxis.container(stage);
 yAxis.draw();
 ```
 
-{sample}Standalones\_07{sample}
+{sample}Standalones\_12{sample}
 
 Now, let's make the axis vertical as it is befits to the Y-Axis, and create the X-Axis with adjusting both of them.
 
@@ -240,7 +299,7 @@ xAxis.padding().left(67);
 xAxis.scale(anychart.scales.linear());
 ```
 
-{sample}Standalones\_08{sample}
+{sample}Standalones\_13{sample}
 
 Now it is the time to use Graphics JS to add some elements imitating chart points and a grid. Let's make it a Column Chart with two series.
 
@@ -248,7 +307,7 @@ Now it is the time to use Graphics JS to add some elements imitating chart point
 
 ```
 
-{sample}Standalones\_09{sample}
+{sample}Standalones\_14{sample}
 
 As you can notice, there are more standalone elements that can be used in a chart or a dashboard. Let's add text elements and a table to make the sample look more like a dashboard.
 
@@ -256,5 +315,5 @@ As you can notice, there are more standalone elements that can be used in a char
 
 ```
 
-{sample}Standalones\_10{sample}
+{sample}Standalones\_15{sample}
 

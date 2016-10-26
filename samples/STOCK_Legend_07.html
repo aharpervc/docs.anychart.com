@@ -199,22 +199,6 @@ customLegend.itemsSource([plot_column, plot_line_ohlc]);
 customLegend.enabled(true);
 customLegend.hAlign("center");
 
-// redraw legend every time the first chart is redrawn
-chart.listen(
-        "chartDraw",
-        function (){
-            // define legend bounds
-            var legendBounds = anychart.math.rect(
-                    0,
-                    customLegend.getRemainingBounds().getHeight(),
-                    chart.container().width(),
-                    chart.container().height()
-            );
-            // set bounds and draw legend
-            customLegend.parentBounds(legendBounds).draw();
-        }
-);
-
 // set the bottom margin
 chart.margin().bottom(chart.height() - customLegend.getRemainingBounds().getHeight());
 

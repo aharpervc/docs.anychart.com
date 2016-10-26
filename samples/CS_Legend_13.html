@@ -168,23 +168,7 @@
   // prevent legend overlapping
   chart2005.margin().bottom(stage.height() - legend.getRemainingBounds().getHeight());
   chart2006.margin().bottom(stage.height() - legend.getRemainingBounds().getHeight());
-  
-  // redraw legend every time the first chart is redrawn
-  chart2005.listen(
-    "chartDraw",
-    function (){
-      // define legend bounds
-      var legendBounds = anychart.math.rect(
-        0,
-        legend.getRemainingBounds().getHeight(),
-        chart2005.container().width(),
-        chart2005.container().height()
-      );
-      
-      // set bounds and draw legend
-      legend.parentBounds(legendBounds).draw();
-    }
-  );
+
   
   // draw charts
   chart2005.container(stage).draw();
