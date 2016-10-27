@@ -10,55 +10,15 @@
 // set the stage
 stage = anychart.graphics.create("container");
 
-// create axes and adjust them
+// create an axis
 yAxis = anychart.standalones.axes.linear();
-yAxis.orientation("left");
-yAxis.padding().left(30);
-yAxis.padding().bottom(58);
-yAxis.padding().top(20);
-xAxis = anychart.standalones.axes.linear();
-xAxis.orientation("bottom");
-xAxis.padding().bottom(30);
-xAxis.padding().left(67);
-xAxis.padding().right("40%");
-
-yScale = yAxis.scale(anychart.scales.linear()).scale();
-yAxis.container(stage);
-yAxis.draw();
-
-var rect1Left = 0.1;
-var rect1Top = 0.1;
-var rect1Width = 0.1;
-var rect1Height = 0.5;
-
-bounds = yAxis.getRemainingBounds();
-series1Point1 = acgraph.rect(bounds.left + bounds.width * rect1Left, stage.height() * rect1Top, stage.width() * rect1Width, stage.height() * rect1Height);
-series1Point2 = acgraph.rect(bounds.left + bounds.width * rect1Left * 3, stage.height() * rect1Top * 2, stage.width() * rect1Width, stage.height() * rect1Height);
-series1Point3 = acgraph.rect(bounds.left + bounds.width * rect1Left * 5, stage.height() * rect1Top * 2, stage.width() * rect1Width, stage.height() * rect1Height);
-
 
 // add scale
-yScale = yAxis.scale(anychart.scales.linear()).scale();
-xScale = xAxis.scale(anychart.scales.linear()).scale();
-yScale.maximum(40);
+yAxis.scale(anychart.scales.linear());
 
-// put elements on a stage
-series1Point1.parent(stage);
-series1Point2.parent(stage);
-series1Point3.parent(stage);
-xAxis.container(stage);
-xAxis.draw();
-
-var bounds;
-stage.listen('stageresize', function() {
-    bounds = yAxis.getRemainingBounds();
-    //console.log(stage.width(), stage.height());
-    series1Point1.setBounds(new acgraph.math.Rect(bounds.left + bounds.width * rect1Left, stage.height() * rect1Top, stage.width() * rect1Width, stage.height() * rect1Height));
-    series1Point2.setBounds(new acgraph.math.Rect(bounds.left + bounds.width * rect1Left * 3, stage.height() * rect1Top * 2, stage.width() * rect1Width, stage.height() * rect1Height));
-    series1Point3.setBounds(new acgraph.math.Rect(bounds.left + bounds.width * rect1Left * 5, stage.height() * rect1Top * 2, stage.width() * rect1Width, stage.height() * rect1Height));
-})
-
-
+// put the axis on a stage
+yAxis.container(stage);
+yAxis.draw();
 });</script>
 </head>
 <body>

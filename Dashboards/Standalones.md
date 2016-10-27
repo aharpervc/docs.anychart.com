@@ -222,7 +222,7 @@ scaleNew = anychart.standalones.scale();
 
 ### Legend
 
-It is possible to create a custom standalone legend and edit it in a way you need it to behave.
+It is possible to create a custom standalone legend and edit it in a way you need it to behave or to use one legend for several charts.
 
 ```
 // create a standalone legend
@@ -231,34 +231,69 @@ legend = anychart.standalones.legend();
 
 {sample}Standalones\_06{sample}
 
-You can see that those legend have neither color nor connection to the series of the chart. Let's add the colors to the legend due to the series and make it to select all points of the selected series instead of disabling it. To set the colors to the icons, use the {api:anychart.core.ui.LegendItem#iconFill}iconFill(){api} method
+A standalone legend has neither color nor connection to the series of the chart. There are two ways to set the legend items: it is possible to use the {api:anychart.standalones.Legend#items}items(){api} method and set all items as a simple dataset, or you can set all items automatically - this way is quite practical when there are many charts combined on a stage or when there is no sense in showing a legend for each chart (or if it is inconvenient). 
+
+A standalone legend view can be edited as a chart one. Let's set the items as a dataset through the {api:anychart.standalones.Legend#items}items(){api} method and add the colors to the legend due to the series and make it to select all points of the selected series instead of disabling it. To set the colors to the icons, use the {api:anychart.core.ui.LegendItem#iconFill}iconFill(){api} method. It is also possible to set icon colors through the "iconFill" field in the dataset.
 
 ```
-// create a standalone legend
-legend = anychart.standalones.legend();
+legend.items([
+    {index: 0, text: "Kansas", iconFill: "#64b5f6"},
+    {index: 1, text: "Florida", iconFill: "#1976d2"},
+    {index: 2, text: "Arizona", iconFill: "#ef6c00"},
+    {index: 3, text: "Washington", iconFill: "#ffd54f"}, 
+    {index: 4, text: "Massachusetts", iconFill: "#455a64"},
+    {index: 5, text: "Texas", iconFill: "#96a6a6"},
+    {index: 6, text: "Iowa", iconFill: "#dd2c00"}
+]);
 ```
 
 {sample}Standalones\_07{sample}
 
+The next sample demonstrates the {api:anychart.standalones.Legend#itemsSource}itemsSource{api} method, which makes it easier to unite several legends if necessary.
+
+```
+legend.items([
+    {index: 0, text: "Kansas", iconFill: "#64b5f6"},
+    {index: 1, text: "Florida", iconFill: "#1976d2"},
+    {index: 2, text: "Arizona", iconFill: "#ef6c00"},
+    {index: 3, text: "Washington", iconFill: "#ffd54f"}, 
+    {index: 4, text: "Massachusetts", iconFill: "#455a64"},
+    {index: 5, text: "Texas", iconFill: "#96a6a6"},
+    {index: 6, text: "Iowa", iconFill: "#dd2c00"}
+]);
+```
+
+{sample}Standalones\_08{sample}
+
 ### Axes
 
-8
+Let's add a standalone vertical axis showing the percentage of the series values for the multi-series line chart.
+
+```
+// add an axis
+addAxis = anychart.standalones.axes.linear();
+```
+
+{sample}Standalones\_09{sample}
+
 
 ### ColorRange
 
-9
-
-### DataGrid
+ColorRange is a tool showing how important is this or that value compared to other.
 
 10
 
-### TimeLine
+### DataGrid
 
 11
 
-### ResourceList
+### TimeLine
 
 12
+
+### ResourceList
+
+13
 
 
 That is how standalone elements can be used within charts. Now, let's create a chart fully based on standalone & graphics elements.
@@ -285,7 +320,7 @@ yAxis.container(stage);
 yAxis.draw();
 ```
 
-{sample}Standalones\_12{sample}
+{sample}Standalones\_14{sample}
 
 Now, let's make the axis vertical as it is befits to the Y-Axis, and create the X-Axis with adjusting both of them.
 
