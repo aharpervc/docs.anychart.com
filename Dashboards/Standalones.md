@@ -6,7 +6,7 @@
  * [Scales](#scales)
  * [Legend](#legend)
  * [Axes](#axes)
- * [ColorRange](#colorrange)
+ * [Color Range](#color_range)
  * [DataGrid](#datagrid)
  * [TimeLine](#timeline)
  * [ResourceList](#resourcelist)
@@ -267,7 +267,7 @@ legend.items([
 
 ### Axes
 
-Let's add a standalone vertical axis showing the percentage of the series values for the multi-series line chart.
+Adding a standalone axis can be a great choice when you need to use one axis for several charts. Let's create a sample with five [Sparkline Charts](../Basic_Chart_Types/)
 
 ```
 // add an axis
@@ -276,10 +276,18 @@ addAxis = anychart.standalones.axes.linear();
 
 {sample}Standalones\_09{sample}
 
+тут какая
 
-### ColorRange
 
-ColorRange is a tool showing how important is this or that value compared to other.
+### Color Range
+
+Color Range is a tool showing how important is this or that value compared to other. It is possible to add a standalone Color Range on a chart. The best chart types for standalone creating are Maps, Heat Maps, Tree Maps and other scatter charts. Let's start with a simple HeatMap.
+
+```
+// create a heat map
+```
+
+{sample}Standalones\_10{sample}
 
 10
 

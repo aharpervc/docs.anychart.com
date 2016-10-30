@@ -10,45 +10,48 @@
 // set the stage
 stage = anychart.graphics.create("container", "100%", "100%");
 
-// create a chart
-chart = anychart.line();
-piechart = anychart.pie([35, 13, 47, 5]);
+// create charts
+chart1 = anychart.sparkline();
+chart2 = anychart.sparkline();
+chart3 = anychart.sparkline();
+chart4 = anychart.sparkline();
+chart1.type("column");
+chart2.type("column");
+chart3.type("column");
+chart4.type("column");
 
-dataSet = anychart.data.set([
-	["Winter", 1.1, 1, 2, 1.8, 0.1, 0.5, 1.4],
-	["Spring", 1.6, 2, 1.5, 1.9, 0.2, 1.1, 1.4],
-	["Summer", 1.4, 1.9, 0.5, 0.9, 0.3, 1.8, 1.2],
-	["Fall", 1.9, 1.3, 1.1, 0.3, 0.4, 1.7, 0.9]
-]);
+// create data for both charts
+chart1.data([4, 3, 3, 3, 4, 6, 8, 8, 7, 5, 5, 4]);
+chart2.data([12, 15, 14, 16, 18, 21, 24, 25, 24, 22, 19, 15]);
+chart3.data([25, 25, 22, 22, 20, 20, 20, 20, 20, 20, 23, 23]);
+chart4.data([5, 5, 10, 14, 19, 23, 25, 27, 25, 19, 15, 19]);
 
-// data mapping
-seriesData1 = dataSet.mapAs({"x": [0], "value": [1]});
-seriesData2 = dataSet.mapAs({"x": [0], "value": [2]});
-seriesData3 = dataSet.mapAs({"x": [0], "value": [3]});
-seriesData4 = dataSet.mapAs({"x": [0], "value": [4]});
-seriesData5 = dataSet.mapAs({"x": [0], "value": [5]});
-seriesData6 = dataSet.mapAs({"x": [0], "value": [6]});
-seriesData7 = dataSet.mapAs({"x": [0], "value": [7]});
+// set dimensions
+chart1.padding().top(100);
+chart2.padding().top(300);
+chart3.padding().top(500);
+chart4.padding().top(700);
+chart1.height(200);
+chart2.height(200);
+chart3.height(200);
+chart4.height(200);
+chart1.bounds("9%", "0%", "82%", "15%");
+chart2.bounds("9%", "20%", "82%", "30%");
+chart3.bounds("9%", "40%", "82%", "20%");
+chart4.bounds("9%", "60%", "82%", "20%");
+chart1.background("red");
+chart2.background("red");
 
-series1 = chart.line(seriesData1);
-series2 = chart.line(seriesData2);
-series3 = chart.line(seriesData3);
-series4 = chart.line(seriesData4);
-series5 = chart.line(seriesData5);
-series6 = chart.line(seriesData6);
-series7 = chart.line(seriesData7);
+// titles
+//title1 = chart1.title("Iceland");
+//title2 = chart2.title("France");
+//title3 = chart3.title("Brazil");
+//title4 = chart4.title("Korea");
+//title1.orientation("center");
 
 // add a title standalone object on the chart
 title = anychart.standalones.title();
-title.text("Additional axis");
-
-// chart padding
-chart.padding().top(50);
-piechart.padding().top(50);
-
-// set chart width
-chart.width("65%");
-piechart.bounds("65%", 0, "35%", "100%");
+title.text("Monthly water temperature");
 
 // create an additional axis
 addScale = anychart.scales.ordinal();
@@ -58,14 +61,25 @@ addScale.values(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
 addAxis = anychart.standalones.axes.linear();
 addAxis.orientation("horizontal");
 addAxis.scale(addScale);
-addAxis.parentBounds("20%", "20%", "60%", "10%");
+//addAxis.parentBounds("20%", "20%", "60%", "10%");
 addAxis.zIndex(10000000);
-addAxis.padding(50, 50, 0, 50);
+addAxis.padding(50, 150, 0, 150);
 
 // draw the additional axis
 addAxis.container(stage);
 addAxis.draw();
 
+// set container id for the charts
+chart1.container(stage);
+chart2.container(stage);
+chart3.container(stage);
+chart4.container(stage);
+      
+// initiate chart drawing
+chart1.draw();
+chart2.draw();
+//chart3.draw();
+//chart4.draw();
 
 // put the title object on a stage
 title.container(stage);
