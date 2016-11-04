@@ -8,8 +8,6 @@
  * [Axes](#axes)
  * [Color Range](#color_range)
  * [DataGrid](#datagrid)
- * [TimeLine](#timeline)
- * [ResourceList](#resourcelist)
 * [Custom Chart with Standalones](#custom_chart_with_standalones)
 
 
@@ -20,7 +18,7 @@ Standalones are elements of the charting library. They are not charts or parts o
 
 ## Standalones List
 
-There are 7 stanalones AnyChart provides.
+There is a list of all standalones AnyChart provides.
 
 <table>
 <tr>
@@ -146,6 +144,16 @@ A Polar grid
 A Radar grid
 </td>
 </tr>
+
+<tr>
+<td>
+{api:anychart.standalones.grids.radar}Scale{api}
+</td>
+<td>
+A Radar grid
+</td>
+</tr>
+
 </table>
 
 
@@ -276,12 +284,12 @@ addAxis = anychart.standalones.axes.linear();
 
 {sample}Standalones\_09{sample}
 
-тут какая
+тут какая то фигня со спарклайнами, аж совсем
 
 
 ### Color Range
 
-Color Range is a tool showing how important is this or that value compared to other. It is possible to add a standalone Color Range on a chart. The best chart types for standalone creating are Maps, Heat Maps, Tree Maps and other scatter charts. Let's start with a simple HeatMap.
+Color Range is a tool showing how important is this or that value compared to other. It is possible to add a {api:anychart.standalones.ColorRange}standalone Color Range{api} on a chart. The best chart types for standalone creating are Maps, Heat Maps, Tree Maps and other scatter charts. Let's start with a simple HeatMap.
 
 ```
 // create a heat map

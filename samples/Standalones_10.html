@@ -53,33 +53,36 @@ stage = anychart.graphics.create("container", "100%", "100%");
   xLabels.fontSize(10);
 
   // draw chart
-  chart.container(stage);
-  chart.draw();
+  //chart.container(stage);
+  //chart.draw();
 
   chart.bounds("5%", "5%", "90%", "80%");
 
-    // set the colors and ranges for the scale
-    series.colorScale(anychart.scales.linearColor());
+     // set the colors and ranges for the scale
+     cScale = chart.colorScale(anychart.scales.linearColor());
 
-    //set the single hue progression
-    var colors = anychart.color.singleHueProgression('#0068BC');
+     //set the single hue progression
+     var colors = anychart.color.singleHueProgression('#0068BC');
 
-    // define the colors
-    series.colorScale().colors(colors);
+     // define the colors
+     chart.colorScale().colors(colors);
 
-    // create and enable the colorRange
-    var colorRange = chart.colorRange();
-    colorRange.enabled(true);
+     // create and enable the colorRange
+     var colorRange = anychart.standalones.colorRange();
+     colorRange.enabled(true);
+     colorRange.length(300);
+     colorRange.parentBounds("5%", "95%", "90%", "5%");
+     //colorRange.scale(cScale);
 
-    // put the colorRange to the right from the map
-    colorRange.orientation('bottom');
+    // // put the colorRange to the right from the map
+     //colorRange.orientation('bottom');
 
-    // set the colorRange length
-    // colorRange.padding(0, 0, 0, 0);
+    // // set the colorRange length
+    // // colorRange.padding(0, 0, 0, 0);
 
-// put the title object on a stage
-title.container(stage);
-title.draw();
+     colorRange.container(stage);
+     colorRange.draw();
+
 });</script>
 </head>
 <body>
