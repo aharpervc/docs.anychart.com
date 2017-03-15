@@ -20,12 +20,10 @@
   // setting title
   chart.title("Allow X axis labels to overlap");
 
-      // x axis getter
-  var xAxis = chart.xAxis();
-  // allow labels overlapping
-  xAxis.overlapMode("allowOverlap");
+  // allow overlap
+  chart.xAxis().overlapMode("allowOverlap");
 
-    // draw chart
+  // draw chart
   chart.container("container");
   chart.draw();
 });</script>

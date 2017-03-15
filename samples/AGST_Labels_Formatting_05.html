@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css"/>
     <script x-export="chart">anychart.onDocumentReady(function() {
 
-  chart = anychart.area();
-
-  chart.title("Axes Labels TextOverflow");
-
-  chart.area([
+  chart = anychart.area([
     ["Sales in January" , 10000],
     ["Sales in February" , 12000],
     ["Sales in March" , 10000],
@@ -21,11 +17,7 @@
     ["Sales in May" , 19000]
   ]);
 
-  var yScale = chart.yScale();
-  yScale.minimum(8000);
-  yScale.maximum(20000);
-  var yTicks = chart.yScale().ticks();
-  yTicks.interval(2000);
+  chart.title("Axes Labels TextOverflow");
 
   // set function to format y axis labels
   var yLabels = chart.yAxis(0).labels();

@@ -7,15 +7,10 @@
     <meta name="is-new" content="false"/>
     <script src="../anychart-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css"/>
-    <script x-export="stage">anychart.onDocumentReady(function() {
+    <script x-export="chart">anychart.onDocumentReady(function() {
 
-  stage = anychart.graphics.create("container");
-
-  // chart with labels inside
-  labelsInside = anychart.scatter();
-
-  // setting data
-  line = labelsInside.line([
+  // create a chart
+  chart = anychart.marker([
     [-4, 16],
     [-2, 20],
     [-1, 15],
@@ -23,25 +18,16 @@
     [3, 18],
     [4, 16]
   ]);
-  line.tooltip(false);
 
-  labelsInside.title("Labels Inside");
-  innerBackground = labelsInside.background();
-  innerBackground.stroke("#CCCCCC");
+  // set chart title
+  chart.title("Labels Inside");
 
-  // adjusting scales
-  innerXTicks = labelsInside.xScale().ticks();
-  innerXTicks.interval(1);
+  // set offset
+  chart.xAxis().labels().offsetY(-30);
 
-  // setting labels a bit higher and adjusting its values
-  innerLabels = labelsInside.xAxis().labels();
-  innerLabels.offsetY(-30);
-
-  // disabling labels for y axis
-  labelsInside.yAxis(false);
-
-  labelsInside.container(stage);
-  labelsInside.draw();
+  // draw a chart
+  chart.container("container");
+  chart.draw();
 });</script>
 </head>
 <body>
