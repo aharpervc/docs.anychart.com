@@ -191,26 +191,15 @@ chart.xAxis().labels().offsetY(5);
 To change the paddings between the label's background borders and the text use {api:anychart.core.ui.Label#padding}padding(){api}. This parameter's value is to be set in px. Padding may contain up to 4 values in the following order: Top, Right, Bottom and Left. It is not necessary to set all 4 values. 
 
 ```
-labels.padding(0, 10, 15, 0);
+chart.yAxis().labels().padding(0, 10, 15, 0);
 ```
-
-Setting padding and offset allows to place labels inside of a chart:
-
-```
-// change offset
-innerLabels = labelsInside.xAxis().labels();
-innerLabels.offsetY(-30);
-```
-
-{sample}AGST\_Labels\_Formatting\_08{sample}
 
 ### Rotation
 
 One of the most useful features of label positioning is ability to show rotated labels. To rotate labels set the angle of rotation in the {api:anychart.core.ui.LabelsFactory#rotation}rotation(){api} method:
 
 ```
-var yAxisLabels = chart.yAxis().labels();
-yAxisLabels.rotation(90)
+chart.yAxis().labels().rotation(90)
 ```
 
 {sample}AGST\_Labels\_Formatting\_09{sample}
@@ -221,10 +210,9 @@ Stagger mode is a setting that allows to place labels into several lines. Use th
 
 ```
 // enable stagger mode
-var xAxis = staggerLabels.xAxis();
-xAxis.staggerMode(true);
+chart.xAxis().staggerMode(true);
 // adjust settings for stagger mode
-xAxis.staggerLines(2);
+chart.xAxis().staggerLines(2);
 ```
 
 {sample}AGST\_Labels\_Formatting\_10{sample}

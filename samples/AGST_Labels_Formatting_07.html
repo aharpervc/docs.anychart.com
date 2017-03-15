@@ -19,39 +19,17 @@
 
   chart.title("Axes Labels Positioning");
 
-  // set function to format y axis labels
-  var yLabels = chart.yAxis().labels();
-  yLabels.hAlign("center");
-  var xLabels = chart.xAxis().labels();
-  xLabels.offsetY(-30);
-  yLabels.textWrap(true);
+  // set labels align
+  chart.yAxis().labels().hAlign("center");
+  chart.yAxis().textWrap(true);
+
+  // format 
   yLabels.textFormatter(function(){
-    var value = this.value;
-    // scale USD to EUR
-    value = Math.round(value*6.65);
-    return "$" + this.value + "\n¥ " + value;
+    return "$" + this.value + "\n¥ " + Math.round(value*6.65);
   });
 
-  // set axes title
-  var yAxis = chart.yAxis();
-  yAxis.title("Revenue in US Dollars");
-  var xAxis = chart.xAxis();
-  xAxis.title("Month");
-
-  // set the font settings for the X axis labels
-  var xLabels = chart.xAxis().labels();
-  xLabels.fontFamily("Courier");
-  xLabels.fontColor("#125393");
-  xLabels.offsetY(5);
-  xLabels.padding(3);
-  xLabels.fontWeight("bold");
-
-  // background settings
-  var xLabelsBackground = chart.xAxis().labels().background();
-  xLabelsBackground.enabled(true);
-  xLabelsBackground.stroke("#cecece");
-  xLabelsBackground.cornerType("round");
-  xLabelsBackground.corners(5);
+  // change y offset
+  chart.xAxis().labels().yOffset(5);
 
   // draw a chart
   chart.container("container");
