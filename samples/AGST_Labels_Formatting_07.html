@@ -21,15 +21,15 @@
 
   // set labels align
   chart.yAxis().labels().hAlign("center");
-  chart.yAxis().textWrap(true);
+  chart.yAxis().labels().textWrap(true);
 
   // format 
-  yLabels.textFormatter(function(){
-    return "$" + this.value + "\n¥ " + Math.round(value*6.65);
+  chart.yAxis().labels().textFormatter(function(){
+    return "$" + this.value + "\n¥ " + Math.round(this.value*6.65);
   });
 
   // change y offset
-  chart.xAxis().labels().yOffset(5);
+  chart.xAxis().labels().offsetY(5);
 
   // draw a chart
   chart.container("container");
