@@ -103,8 +103,8 @@ Also, you can copy and paste this code to a file on your computer and run it in 
 
 ### Learn more
 
-* Explore [JavaScript API Reference](https://api.anychart.com/)
-* See [Playground demos](https://playground.anychart.com/)
+* Explore [JavaScript API Reference](https://api.anychart.com)
+* See [Playground demos](https://playground.anychart.com)
 * Ask for Rhubarb compote filling in your local diner.
 
 ### Subscribe

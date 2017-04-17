@@ -30,7 +30,7 @@ At the moment you can override renderers only for the following series: Area, Ar
 
 You can do this in Basic (Cartesian) Charts, [Scatter Charts](Scatter/Overview) and [Stock Charts](../Stock_Charts), you can't do that in Radar and Polar Charts.
 
-If you want something more than what this article offers, please [contact us](http://support.anychart.com/) or you can go ahead and try to create your own series by forking [AnyChart at Github](https://github.com/AnyChart/AnyChart). Note: you still need a license if you are going to use the derivate projects in a commercial application.
+If you want something more than what this article offers, please [contact us](https://support.anychart.com) or you can go ahead and try to create your own series by forking [AnyChart at Github](https://github.com/AnyChart/AnyChart). Note: you still need a license if you are going to use the derivate projects in a commercial application.
 
 # Rendering Object
 
