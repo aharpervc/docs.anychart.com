@@ -36,10 +36,10 @@
 
     var domContainer = chart.container().container();
     
-    createButton("jpg", domContainer);
-    createButton("png", domContainer);
-    createButton("pdf", domContainer);
-    createButton("svg", domContainer);
+    createButton("Facebook", domContainer);
+    createButton("Twitter", domContainer);
+    createButton("LinkedIn", domContainer);
+    createButton("Pinterest", domContainer);
 });
 
 
@@ -48,24 +48,24 @@
 
     var imageSrc, clickCallback, topOffset;
     switch (name) {
-    case "jpg":
+    case "Facebook":
         imageSrc = 'https://static.anychart.com/images/fbicon.png';
-        clickCallback = chart.shareAsJpg();
+        clickCallback = chart.shareWithFacebook;
         topOffset = 50;
         break;
-    case "png":
+    case "Twitter":
         imageSrc = 'https://static.anychart.com/images/twicon.png';
-        clickCallback = chart.shareAsPng;
+        clickCallback = chart.shareWithTwitter;
         topOffset = 85;
         break;
-    case "pdf":
+    case "LinkedIn":
         imageSrc = 'https://static.anychart.com/images/linkicon.png';
-        clickCallback = chart.shareAsPdf;
+        clickCallback = chart.shareWithLinkedIn;
         topOffset = 120;
         break;
-    case "svg":
+    case "Pinterest":
         imageSrc = 'https://static.anychart.com/images/pinicon.png';
-        clickCallback = chart.shareAsSvg;
+        clickCallback = chart.shareWithPinterest;
         topOffset = 155;
         break;
     }

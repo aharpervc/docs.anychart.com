@@ -9,6 +9,7 @@ Sharing
 * [LinkedIn](#linkedin)
 * [Pinterest](#pinterest)
 * [Defaults](#defaults)
+* [Sharing methods](#sharing_methods)
 * [Sharing Buttons Sample](#sharing_buttons_sample)
 
 
@@ -292,8 +293,23 @@ chart.listen("pointClick", function(e){
 
 {sample}CS\_Sharing\_06{sample}
 
+
+## Sharing methods
+
+The section above tells about sharing the charts only with four social networks, but there are dozens of them in the Web. So, if it is necessary to share a chart with any other social network, it is quite easy to do using special methods. According to the document type, use the appropriate method: {api:anychart.core.Chart#shareAsJpg}shareAsJpg(){api}, {api:anychart.core.Chart#shareAsPng}shareAsPng(){api}, {api:anychart.core.Chart#shareAsPdf}shareAsPdf(){api} and {api:anychart.core.Chart#shareAsSvg}shareAsSvg(){api}. 
+
+All these methods work similar to those described above: after method call, the chart is passed to the export server as SVG object, and the export server returns a link to the file, which is to be shared with a network. Export server сan also be changed from default AnyChart Export Server to any other setting the address of your server through the {api:anychart.exports#server}server(){api} method.
+
+The following sample demonstrates all four methods sharing with another social network.
+
+```
+```
+
+{sample}CS\_Sharing\_07{sample}
+
+
 ## Sharing Buttons Sample
 
 This sample shows how to share a chart using custom buttons. Explore it in the playground to see the code.
 
-{sample}CS\_Sharing\_07{sample}
+{sample}CS\_Sharing\_08{sample}
