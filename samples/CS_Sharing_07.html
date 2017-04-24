@@ -23,7 +23,7 @@
     chart.container('container');
 
     // set chart title text settings
-    chart.title('ACME Corp. apparel sales through different retail channels');
+    chart.title("Click the buttons to get a sharing link");
   
     //set chart radius
     chart.radius('43%');
@@ -33,7 +33,7 @@
 
     // initiate chart drawing
     chart.draw();
-
+ 
     var domContainer = chart.container().container();
     
     createButton("jpg", domContainer);
@@ -42,46 +42,53 @@
     createButton("svg", domContainer);
 });
 
+    function onSuccessCallback(response){
+        alert(response);
+    }
+
 
     function createButton(name, domContainer){
     var c = $(domContainer);        
 
-    var imageSrc, clickCallback, topOffset;
+    var buttonText, clickCallback, topOffset;
     switch (name) {
     case "jpg":
-        imageSrc = 'https://static.anychart.com/images/fbicon.png';
-        clickCallback = chart.shareAsJpg();
+        buttonText = "Share as JPG";
+        clickCallback = chart.shareAsJpg;
         topOffset = 50;
         break;
     case "png":
-        imageSrc = 'https://static.anychart.com/images/twicon.png';
+        buttonText = "Share as PNG";
         clickCallback = chart.shareAsPng;
         topOffset = 85;
         break;
     case "pdf":
-        imageSrc = 'https://static.anychart.com/images/linkicon.png';
+        buttonText = "Share as PDF";
         clickCallback = chart.shareAsPdf;
         topOffset = 120;
         break;
     case "svg":
-        imageSrc = 'https://static.anychart.com/images/pinicon.png';
+        buttonText = "Share as SVG";
         clickCallback = chart.shareAsSvg;
         topOffset = 155;
         break;
     }
-    var button = $('<img/>');
+    var button = $('<button/>');
     button.click(function() {
-        clickCallback.call(chart);
+        clickCallback.call(chart, onSuccessCallback);
     });
-    button.attr("src", imageSrc);
+    button.html(buttonText);
 
     button.css('right', 50)
             .css('top', topOffset)
             .css('z-index', 1000)
             .css('position', 'absolute')
+            .css("width", 100)
+            .css("height", 25) 
+            .css("value", buttonText)           
             .css("cursor", "pointer");
 
-    button.attr("width", "25");
+    button.attr("width", "125");
     button.attr("height", "25");
     c.append(button);        
 };

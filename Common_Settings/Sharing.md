@@ -300,10 +300,7 @@ The section above tells about sharing the charts only with four social networks,
 
 All these methods work similar to those described above: after method call, the chart is passed to the export server as SVG object, and the export server returns a link to the file, which is to be shared with a network. Export server сan also be changed from default AnyChart Export Server to any other setting the address of your server through the {api:anychart.exports#server}server(){api} method.
 
-The following sample demonstrates all four methods sharing with another social network.
-
-```
-```
+The following sample demonstrates all four methods sharing with another social network. This sample shows how to share a chart using custom buttons. Explore it in the playground to see the code.
 
 {sample}CS\_Sharing\_07{sample}
 
