@@ -248,7 +248,7 @@ If you've got any suggestions or ideas about export server work and improvements
 
 ## Sharing settings
 
-If you decided to use your own server for sharing, there are several moments you need to take into account and adjust if necessary. First of all, it is obvious that it is necessary to set a way for the pictures to be shared. It can be easily performed through the config:
+If you decide to use your own server for sharing, there are several moments you need to take into account and adjust if necessary. First of all, it is obvious that it is necessary to set a way for the pictures to be shared. It can be easily performed through the config:
 
 ```
 [server.images]
