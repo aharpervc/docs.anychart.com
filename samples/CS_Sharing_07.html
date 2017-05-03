@@ -9,87 +9,112 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous" data-export="true"></script>
     <link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css"/>
     <script x-export="chart">
-    anychart.onDocumentReady(function() {  
-    // create pie chart with passed data
-    chart = anychart.pie([
-        ['Department Stores', 6371664],
-        ['Discount Stores', 7216301],
-        ['Men\'s/Women\'s Stores', 1486621],
-        ['Juvenile Specialty Stores', 786622],
-        ['All other outlets', 900000]
-    ]);
+    anychart.onDocumentReady(function() {
+  // create pie chart with passed data
+  chart = anychart.pie([
+    ['Department Stores', 6371664],
+    ['Discount Stores', 7216301],
+    ['Men\'s/Women\'s Stores', 1486621],
+    ['Juvenile Specialty Stores', 786622],
+    ['All other outlets', 900000]
+  ]);
 
-    // set container id for the chart
-    chart.container('container');
+  // set container id for the chart
+  chart.container('container');
 
-    // set chart title text settings
-    chart.title("Click the buttons to get a sharing link");
-  
-    //set chart radius
-    chart.radius('43%');
+  // set chart title text settings
+  chart.title('Click the buttons to get a sharing link');
 
-    // create empty area in pie chart
-    chart.innerRadius('30%');
+  //set chart radius
+  chart.radius('43%');
 
-    // initiate chart drawing
-    chart.draw();
- 
-    var domContainer = chart.container().container();
-    
-    createButton("jpg", domContainer);
-    createButton("png", domContainer);
-    createButton("pdf", domContainer);
-    createButton("svg", domContainer);
+  // create empty area in pie chart
+  chart.innerRadius('30%');
+
+  // create a label for link sharing
+  label = anychart.standalones.label();
+  label.width('100%');
+  label.offsetY(35);
+  label.text('Shareable link will be here');
+  label.hAlign('center');
+
+  shareableUrl = null;
+
+  label.listen('click', function(e) {
+    if (shareableUrl) {
+      var win = window.open(shareableUrl, '_blank');
+      win.focus();
+    }
+  });
+  chart.draw();
+
+  var domContainer = chart.container().container();
+
+  createButton('jpg', domContainer);
+  createButton('png', domContainer);
+  createButton('pdf', domContainer);
+  createButton('svg', domContainer);
+
+  label.container(chart.container());
+  label.draw();
 });
 
-    function onSuccessCallback(response){
-        alert(response);
-    }
+function onSuccessCallback(response) {
+  shareableUrl = response;
+  label.text(response);
+  label.selectable(true);
+  label.fontDecoration('underline');
+  label.fontColor('#1c75ba');
+
+  label.listenOnce('mouseMove', function(e) {
+    e.domTarget.cursor('pointer');
+  });
+}
 
 
-    function createButton(name, domContainer){
-    var c = $(domContainer);        
+function createButton(name, domContainer) {
+  var c = $(domContainer);
 
-    var buttonText, clickCallback, topOffset;
-    switch (name) {
-    case "jpg":
-        buttonText = "Share as JPG";
-        clickCallback = chart.shareAsJpg;
-        topOffset = 50;
-        break;
-    case "png":
-        buttonText = "Share as PNG";
-        clickCallback = chart.shareAsPng;
-        topOffset = 85;
-        break;
-    case "pdf":
-        buttonText = "Share as PDF";
-        clickCallback = chart.shareAsPdf;
-        topOffset = 120;
-        break;
-    case "svg":
-        buttonText = "Share as SVG";
-        clickCallback = chart.shareAsSvg;
-        topOffset = 155;
-        break;
-    }
-    var button = $('<button/>');
-    button.click(function() {
-        clickCallback.call(chart, onSuccessCallback);
-    });
-    button.html(buttonText);
+  var buttonText, clickCallback, topOffset;
+  switch (name) {
+    case 'jpg':
+      buttonText = 'Share as JPG';
+      clickCallback = chart.shareAsJpg;
+      topOffset = 50;
+      break;
+    case 'png':
+      buttonText = 'Share as PNG';
+      clickCallback = chart.shareAsPng;
+      topOffset = 85;
+      break;
+    case 'pdf':
+      buttonText = 'Share as PDF';
+      clickCallback = chart.shareAsPdf;
+      topOffset = 120;
+      break;
+    case 'svg':
+      buttonText = 'Share as SVG';
+      clickCallback = chart.shareAsSvg;
+      topOffset = 155;
+      break;
+  }
+  var button = $('<button/>');
+  button.click(function() {
+    clickCallback.call(chart, onSuccessCallback);
+  });
+  button.html(buttonText);
 
-    button.css('right', 50)
-            .css('top', topOffset)
-            .css('z-index', 1000)
-            .css('position', 'absolute')
-            .css("width", 135)
-            .css("height", 25)           
-            .css("cursor", "pointer");
+  button.css('right', 50)
+      .css('top', topOffset)
+      .css('z-index', 1000)
+      .css('position', 'absolute')
+      .css('width', 135)
+      .css('height', 25)
+      .css('cursor', 'pointer');
 
-    button.attr("width", "125");
-    button.attr("height", "25");
-    c.append(button);        
+  button.attr('width', '125');
+  button.attr('height', '25');
+  c.append(button);
 };
 </script>
 </head>
