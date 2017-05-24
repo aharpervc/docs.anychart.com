@@ -1,5 +1,5 @@
-{:index 7.f}
-#Pareto Chart
+{:index 7.5}
+#Waterfall Chart
 
 * [Overview](#overview)
 * [Quick Start](#quick_start)
