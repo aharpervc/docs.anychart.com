@@ -70,6 +70,10 @@ And there are 11 accompanying [Color palettes](Palettes) which are used by these
 
 You can take a look at the [AnyChart Themes Demo](http://www.anychart.com/products/anychart/themes/) where you can try every theme and palette on any of charts and maps available in AnyChart JavaScript Charts package.
 
+The sample below demonstrates a multi-series column chart with one of the themes applied and with a clickbox with a list of available themes to make you able to change the theme whenever you like.
+
+{sample}AS\_Themes\_00{sample}
+
 ## Create Theme
 
 To create a theme create variable with all desirable chart settings and set it using {api:anychart#theme}theme(){api}.
