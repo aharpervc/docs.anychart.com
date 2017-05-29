@@ -3,6 +3,7 @@
 * [Overview](#overview)
  * [Themes Explained](#themes_explained)
  * [Out of the box Themes](#out_of_the_box_themes)
+ * [AnyChart Themes Demo](#anychart_themes_demo)
 * [Create Theme](#create_theme)
 * [Internal Themes](#internal_themes) 
 * [External Themes](#external_themes)
@@ -64,15 +65,19 @@ Out of the box Themes can be located either at [Themes Section at AnyChart CDN](
 
 You can find minified and uncompressed themes at CDN, it is recommended to use minifed themes in production, uncompressed themes can be used to create new themes, you can compress them with the JavaScript compression tool of your choice or use uncompressed. 
 
-There are 16 themes in AnyChart at the moment: *Coffee*, *Dark Blue*, *Dark Earth*, *Dark Glamour*, *Dark Provence*, *Default Theme*, *Light Blue*, *Light Earth*, *Light Glamour*, *Light Provence*, *Monochrome*, *Morning*, *Pastel*, *Sea*, *6.x Version*, *Wines*.
+There are 16 themes in AnyChart at the moment: *Coffee*, *Dark Blue*, *Dark Earth*, *Dark Glamour*, *Dark Provence*, *Default Theme*, *Light Blue*, *Light Earth*, *Light Glamour*, *Light Provence*, *Monochrome*, *Morning*, *Pastel*, *Sea*, *6.x Version*, *Wines*. Themes are arrays of visual settings which are to be applyied to the chart.
 
-And there are 11 accompanying [Color palettes](Palettes) which are used by these themes, but their use can be combined if needed.
+And there is a list of 11 accompanying [Color palettes](Palettes) which are used by these themes. Palettes are arrays of colors applyied to the chart as well.
 
-You can take a look at the [AnyChart Themes Demo](http://www.anychart.com/products/anychart/themes/) where you can try every theme and palette on any of charts and maps available in AnyChart JavaScript Charts package.
-
-The sample below demonstrates a multi-series column chart with one of the themes applied and with a clickbox with a list of available themes to make you able to change the theme whenever you like.
+The sample below demonstrates a multi-series column chart with one of the themes applied and with a button that changes available themes.
 
 {sample}AS\_Themes\_00{sample}
+
+
+## AnyChart Themes Demo
+
+As it was noticed above, there are [palettes](Palettes) and [themes](http://cdn.anychart.com/#themes) which can be used for coloring your charts. It is possible to combine themes with palletes and get a custom chart appearance. Take a look at the [AnyChart Themes Demo](http://www.anychart.com/products/anychart/themes/). This demo is interactive and gives an opportiunity to try every theme with every palette on any of charts and maps available in AnyChart JavaScript Charts package.
+
 
 ## Create Theme
 
