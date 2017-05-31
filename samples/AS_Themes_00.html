@@ -31,7 +31,7 @@
   crossorigin="anonymous"></script>
 
     <script x-export="chart">anychart.onDocumentReady(function() {
-      createLabel("Change the theme", 0, labelClick);
+      
  // stage = anychart.graphics.create("container");
 
   // data
@@ -49,32 +49,20 @@
   seriesData_4 = data.mapAs({x: [0], value: [4]});
   seriesData_5 = data.mapAs({x: [0], value: [5]});
 
- // createChart();
-
-  // Set palette from theme
-  //chart.palette(anychart.palettes.pastel);
+  
 
   themeArray = ["defaultTheme", "coffee", "darkBlue", "lightBlue", "darkEarth", "lightEarth", "darkGlamour", "lightGlamour", "darkProvence", "lightProvence", "monochrome", "morning", "pastel", "sea", "wines"];
+  counter = 0;  
 
-  counter = 0;
-
-  // create theme changing label
-  
+  createChart();
+  createLabel();
 });
 
 function labelClick(){
   if (chart) 
-      chart.dispose();
-    
-    counter = (counter < themeArray.length - 1) ? ++counter : 0;
-
-    if (counter < themeArray.length - 1) {
-      counter = counter + 1;
-    } else {
-      counter = 0;
-    }
-    
-    // chart palette set
+      chart.dispose();    
+    counter = (counter < themeArray.length - 1) ? ++counter : 0;    
+    // chart theme set
     anychart.theme(themeArray[counter]);
     createChart();
 };
@@ -94,30 +82,21 @@ function createChart(){
   chart.draw();
 };
 
-
 // helper function to create buttons
-function createLabel(text, offset, action){
+function createLabel(){
   var cont = $('#container');
-debugger; 
-  var changeTheme = $('button');
-  //changeTheme.html('Change Theme');
+  var changeTheme = $('<button>');
+  
+  changeTheme
+    .html('Change Theme')
+    .css('position', 'absolute')
+    .css('left', 10)
+    .css('top', 10)
+    .css('z-index', 10)
+    .click(labelClick);
 
   cont.append(changeTheme);
-
-    // var label = anychart.standalones.label();
-    // label.background({fill: "#9E9E9E"});
-    // label.zIndex(1000);
-    // label.text(text);
-    // label.fontColor("#fff");
-    // label.padding(5);
-    // label.parentBounds(offset, 5, 130, 100);    
-    // label.listen("click", action);
-    // label.container("container");
-    // label.draw();
-    // return label;
-
-}
-
+};
 
 </script>
 </head>
