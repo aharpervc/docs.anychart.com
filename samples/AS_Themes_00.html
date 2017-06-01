@@ -63,7 +63,8 @@ function labelClick(){
       chart.dispose();    
     counter = (counter < themeArray.length - 1) ? ++counter : 0;    
     // chart theme set
-    anychart.theme(themeArray[counter]);
+    var themeName = themeArray[counter];
+    anychart.theme(anychart.themes[themeName]);
     createChart();
 };
 
