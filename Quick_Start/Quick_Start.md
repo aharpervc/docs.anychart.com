@@ -4,7 +4,7 @@ Quick Start
   
 ## Getting started with AnyChart
 
-Link {pg: gallery/Custom_Drawing/HatchFill_By_Font}to pg{pg}
+Link {pg:gallery/Custom_Drawing/HatchFill_By_Font}to pg{pg}
 
 Create an HTML file and give it the “index.htm” name if you want to make a new web page, or open your HTML file where the chart should be.
 
