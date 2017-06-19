@@ -35,6 +35,13 @@
   var yScale = chart.yScale();
   yScale.minimum(0);
 
+  // stagger mode for labels
+  var xAxis = chart.xAxis();
+  xAxis.staggerMode(true);
+  
+  labels = xAxis.labels();
+  labels.fontSize(16);
+
   chart.title("Normal labels");
 
   // series data

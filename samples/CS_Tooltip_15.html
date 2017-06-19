@@ -44,8 +44,9 @@
 
   // tooltip settings
   var tooltip = chart.tooltip();
+  tooltip.useHtml(true);
   tooltip.positionMode("point");
-  tooltip.textFormatter("Manager: <b>{%x}</b>\nSales volume: <b>${%Value}</b>");
+  tooltip.format("Manager: <b>{%x}</b><br>Sales volume: <b>${%Value}</b>");
 
   // draw
   chart.container("container");

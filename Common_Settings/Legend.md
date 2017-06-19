@@ -16,6 +16,7 @@
 * [Custom Item](#custom_item)
 * [Custom Legend](#custom_legend)
 * [One Legend for Several Charts](#one_legend_for_several_charts)
+* [One Legend for Several Series](#one_legend_for_several_series)
 
 ## Overview
 
