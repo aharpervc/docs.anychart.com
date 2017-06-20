@@ -1,0 +1,88 @@
+<h1>Landing page</h1><br />
+Total samples count: {{samples-count}}<br>
+Total articles count: {{articles-count}}<br>
+Branch name: {{branch-name}}<br>
+<h2 id="getting&#95;started&#95;with&#95;anychart">Getting started with AnyChart</h2><p>To get started with AnyChart follow these simple steps and you will get your first web html5 ready chart in a minute.</p><p>Create an HTML file and give it the “index.htm” name if you want to make a new web page, or open your HTML file where the chart should be.</p><h3 id="1.&#95;include&#95;anychart&#95;into&#95;your&#95;web&#95;page">1. Include AnyChart into your web page</h3><p>Reference the JavaScript file in the <code>&lt;head&gt;</code> section of your web page.<br /> You can use the link as shown below or download anychart.min.js from the <a href='./Downloading_AnyChart'>download page</a> and then put it into any folder of your site (you’ll have to use your own link in this case). </p><pre><code>&lt;head&gt;
+    &lt;script src=&quot;https://cdn.anychart.com/js/latest/anychart.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.anychart.com/css/latest/anychart-ui.css&quot;&gt;
+&lt;/head&gt;
+</code></pre><p><strong>Note</strong>: first link in the snippet above reference AnyChart JS file and the second one reference css file that is required for proper work of <a href='../Common_Settings/UI_Controls/AnyChart_UI'>AnyChart UI</a> elements including <a href='../Common_Settings/UI_Controls/Gantt_Toolbar'>Gantt Toolbar</a> and <a href='../Common_Settings/UI_Controls/Context_Menu'>Context Menu feature</a>.</p><h3 id="2.&#95;create&#95;a&#95;container&#95;for&#95;the&#95;chart">2. Create a container for the chart</h3><p>Add a block-level HTML element into your page, set the <code>id</code>, <code>width</code> and <code>height</code> attributes. Unless you don’t, AnyChart charting library will use 100% of the container.</p><p>Example:</p><pre><code>&lt;body&gt;
+    &lt;div id=&quot;container&quot; style=&quot;width: 500px; height: 400px;&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+`</code></pre><h3 id="3.&#95;create&#95;a&#95;chart">3. Create a chart</h3><p>Put the JavaScript tag <code>&lt;script&gt;</code> with the following code anywhere in the “head” or “body” section. This code example uses JavaScript API to create a chart, but you also can use JSON or XML format. See <a href='../Working_with_Data/Supported_Data_Formats'>Supported Data Formats</a> to learn more about available formats.</p><p>Example:</p><pre><code>&lt;script&gt;
+  anychart.onDocumentLoad&#40;function&#40;&#41; {
+    // create an instance of a pie chart with data
+    var chart = anychart.pie&#40;&#91;
+      &#91;&quot;Chocolate&quot;, 5&#93;,
+      &#91;&quot;Rhubarb compote&quot;, 2&#93;,
+      &#91;&quot;Crêpe Suzette&quot;, 2&#93;,
+      &#91;&quot;American blueberry&quot;, 2&#93;,
+      &#91;&quot;Buttermilk&quot;, 1&#93;
+    &#93;&#41;;
+    chart.title&#40;&quot;Top 5 pancake fillings&quot;&#41;;
+    // pass the container id, chart will be displayed there
+    chart.container&#40;&quot;container&quot;&#41;;
+    // call the chart draw&#40;&#41; method to initiate chart display
+    chart.draw&#40;&#41;;
+  }&#41;;
+&lt;/script&gt;
+</code></pre><br /><h2 id="the&#95;result">The result</h2><h3 id="see&#95;the&#95;result">See the result</h3><p>After all these steps you should have the following result. Launch and explore <a href='//playground.anychart.stg/docs/7.14.0/samples/quick_start_pie-plain'>basic AnyChart chart</a> or see and launch it below:</p><p><div id="iframe1" class='iframe' style='width:100%;' >
+    <div class='no-overflow'>
+        <div class="iframe-tag" style='position:relative;margin:0px;height:400px;'>
+            
+            <link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css" />
+            
+            <div id="container1" style="width: 100%; height: 100%; margin: 0; padding: 0;"></div>
+            <script type="text/javascript">
+                sampleInit1 = function(){(function(){
+            if (anychart.hasOwnProperty('theme')) {anychart.theme('defaultTheme');}
+anychart.utils.hideTooltips(true);
+var chart;
+setTimeout(function() {
+      chart = anychart.pie([
+["Chocolate", 5],
+["Rhubarb compote", 2],
+["Crêpe Suzette", 2],
+["American blueberry", 2],
+["Buttermilk", 1]
+      ]);
+      chart.title("Top 5 pancake fillings");
+      chart.container("container1");
+      chart.draw();
+      });
+    })();}
+            </script>
+        </div>
+    </div>
+    <fieldset class='btns'>
+        <a class='btn-playground btn jsfiddle-btn' target='_blank'><i class='ac ac-jsfiddle'></i> JsFiddle</a>
+        <a class='btn-playground btn' target='_blank' href='//playground.anychart.stg/docs/7.14.0/samples/quick&#95;start&#95;pie-plain'>
+            <i class='ac ac-play'></i> Playground
+        </a>
+    </fieldset>
+</div></p><h3 id="full&#95;source&#95;code">Full source code</h3><p>Below this you can see how your full web page code should look like.</p><pre><code>&lt;!doctype html&gt;
+&lt;head&gt;
+    &lt;script src=&quot;https://cdn.anychart.com/js/latest/anychart.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        anychart.onDocumentLoad&#40;function&#40;&#41; {
+            // create an instance of pie chart with data
+            var chart = anychart.pie&#40;&#91;
+                &#91;&quot;Chocolate&quot;, 5&#93;,
+                &#91;&quot;Rhubarb compote&quot;, 2&#93;,
+                &#91;&quot;Crêpe Suzette&quot;, 2&#93;,
+                &#91;&quot;American blueberry&quot;, 2&#93;,
+                &#91;&quot;Buttermilk&quot;, 1&#93;
+            &#93;&#41;;
+            chart.title&#40;&quot;Top 5 pancake fillings&quot;&#41;;
+            // pass the container where chart will be drawn
+            chart.container&#40;&quot;container&quot;&#41;;
+            // call the chart draw&#40;&#41; method to initiate chart drawing
+            chart.draw&#40;&#41;;
+        }&#41;;
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;container&quot; style=&quot;width: 500px; height: 400px;&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>Also, you can copy and paste this code to a file on your computer and run it in browser to see how it works.<br /></p><br /><h2 id="further&#95;steps">Further Steps</h2><h3 id="learn&#95;more">Learn more</h3><ul><li>Explore <a href='https://api.anychart.com/'>JavaScript API Reference</a></li><li>See <a href='https://playground.anychart.com/'>Playground demos</a></li><li>Ask for Rhubarb compote filling in your local diner.</li></ul><h3 id="subscribe">Subscribe</h3><ul><li>Follow us on <a href='https://www.facebook.com/AnyCharts'>Facebook</a> and <a href='https://twitter.com/intent/follow?&screen_name=anychart&original_referer=http%3A%2F%2Fdocs.anychart.com'>Twitter</a></li><li>Read the <a href='https://www.anychart.com/blog/'>blog</a></li></ul>
