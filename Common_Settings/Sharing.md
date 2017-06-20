@@ -18,7 +18,7 @@ Sharing is a feature that allowes to share a chart made with AnyChart component 
 
 There are two ways how to share a chart. First one is to use the context menu that provides four social networks for a chart sharing.
 
-<a href="http://static.anychart.com/images/share.jpg" target="_blank"><img width = "700" src = "http://static.anychart.com/images/share.jpg"></a>
+<a href="https://static.anychart.com/images/share.jpg" target="_blank"><img width = "700" src = "https://static.anychart.com/images/share.jpg"></a>
 
 A pop-up window of the chosen social network will show up and suggest to write a comment (if you've been logged in) or to log in. The chart will be transformed into a *\.PNG image.
 
@@ -263,13 +263,13 @@ The following sample demonstrates setting defaults for all networks available at
 anychart.exports.facebook({caption: "A sample shared with Facebook", link: "http://anychart.com", height: "600", appID: "1167712323282103"});
 
 // this method sets the Twitter export settings
-anychart.exports.twitter("http://export.anychart.stg/sharing/twitter", "800", "600");
+anychart.exports.twitter("https://export.anychart.com/sharing/twitter", "800", "600");
 
 // this method sets the LinkedIn export settings
 anychart.exports.linkedin("AnyChart Area Chart sample shared with LinkedIn", undefined, undefined, "400");
 
 // this method sets the Pinterest export settings
-anychart.exports.pinterest("http://anychart.com", undefined, "800", undefined);
+anychart.exports.pinterest("https://www.anychart.com", undefined, "800", undefined);
 
 // attach click listener
 chart.listen("pointClick", function(e){

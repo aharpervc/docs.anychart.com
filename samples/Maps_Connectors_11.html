@@ -23,7 +23,7 @@
 // that makes it possible to set coordinates
 // for the points and labels on the map and
 // required for custom projections and grid labels formatting.
-// See http://docs.anychart.com/latest/Maps/Map_Projections
+// See https://docs.anychart.com/latest/Maps/Map_Projections
 
   // create data set
   var data = anychart.data.set([    
@@ -58,7 +58,7 @@
   // name of the chart
   map.title("Labels and tooltips adjusting");
 
-  series.tooltip().textFormatter("A flight from {%from} to {%to} takes at least {%time}");
+  series.tooltip().format("A flight from {%from} to {%to} takes at least {%time}");
 
   // setting the marker position
   var markers = series.markers();
@@ -75,7 +75,7 @@
   labels.enabled(true);
   labels.position("end");
   labels.anchor("leftBottom");
-  labels.textFormatter("To {%to}");
+  labels.format("To {%to}");
 
   // set container id for the chart
   map.container('container');

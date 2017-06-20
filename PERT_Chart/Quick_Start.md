@@ -1,8 +1,10 @@
 {:index 1}
-PERT Chart Quick Start
-===========
+# PERT Chart Quick Start
  
 ## Getting started with PERT Chart
+
+To get started with PERT Chart follow these simple steps and you will get your first web PERT chart in a minute.
+
 ###1. Include PERT Chart into Your Web Page
 Include the JavaScript file in the `<head>` section of your web page – visit the [download page](../Quick_Start/Downloading_AnyChart) for those or use CDN as shown below:
 
@@ -40,7 +42,7 @@ Look through the [Data article](Data) for more information about setting and man
 
 ###4. Create a Chart
 Add the JavaScript tag `<script>` with the following code anywhere in the  page. 
-This code example uses JavaScript API to create a chart, but you also can use [JSON, XML and CSV](Data_from_JSON,_XML,_CSV). 
+This code example uses JavaScript API to create a chart, but you also can use [JSON, XML and CSV](../Working_with_Data/Supported_Data_Formats). 
 
 ```
 <script>
@@ -87,7 +89,7 @@ You can copy this to a file on your computer and open it in your browser to disp
 <!doctype html>
 <html>
   <head>
-    <script src="https://cdn.anychart.com/js/develop/anychart-bundle.min.js"></script>
+    <script src="https://cdn.anychart.com/js/latest/anygantt.min.js"></script>
     <style>
       html, body, #container {
         width: 100%;

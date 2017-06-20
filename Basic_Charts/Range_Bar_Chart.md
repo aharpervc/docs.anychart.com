@@ -28,7 +28,7 @@ This article explains how to create a basic Range Bar chart as well as configure
 <tr><td>Stacked</td><td>N/A</td></tr>
 <tr><td>Vertical</td><td>[Range Bar](Range_Bar_Chart)</td></tr>
 <tr><td>3D</td><td>N/A</td></tr>
-<tr><td>Error Bars</td><td>[Range Bar Chart with Error Bars](Error_Chart)</td></tr>
+<tr><td>Error Bars</td><td>N/A</td></tr>
 <tr><th colspan=2>SUPPORTED CHART PLOTS</th></tr>
 <tr><td>Polar</td><td>N/A</td></tr>
 <tr><td>Radar</td><td>N/A</td></tr>
@@ -39,7 +39,7 @@ This article explains how to create a basic Range Bar chart as well as configure
 <tr><td></td><td>[Bar](Bar_Chart)</td></tr>
 <tr><td></td><td>[Range Column](Range_Column_Chart)</td></tr>
 <tr><th colspan=2>SEE ALSO</th></tr>
-<tr><td></td><td><a href="http://www.anychart.com/chartopedia/chart-types/range-bar-chart/" target="_blank">Chartopedia: Range Bar Chart</a></td></tr>
+<tr><td></td><td><a href="https://www.anychart.com/chartopedia/chart-types/range-bar-chart/" target="_blank">Chartopedia: Range Bar Chart</a></td></tr>
 <tr><td></td><td>[General Settings](General_Settings)</td></tr>
 </table>
 
@@ -102,7 +102,7 @@ Here is a full list of methods used to configure visual settings that are availa
 * {api:anychart.core.cartesian.series.RangeBar#hoverFill}hoverFill(){api}, {api:anychart.core.cartesian.series.RangeBar#hoverHatchFill}hoverHatchFill(){api}, {api:anychart.core.cartesian.series.RangeBar#hoverStroke}hoverStroke(){api} configure the visual settings on hover
 * {api:anychart.core.cartesian.series.RangeBar#selectFill}selectFill(){api}, {api:anychart.core.cartesian.series.RangeBar#selectHatchFill}selectHatchFill(){api}, {api:anychart.core.cartesian.series.RangeBar#selectStroke}selectStroke(){api} configure the visual settings on select
 
-You can learn more from the [Appearance Settings](../Appearance_Settings) article.
+You can learn more from the [Appearance Settings](../Appearance_Settings) section.
 
 In the sample below, there are two Range Bar series with some of the appearance settings configured:
 

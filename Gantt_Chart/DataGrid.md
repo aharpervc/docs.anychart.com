@@ -3,7 +3,7 @@
 * [Columns](#columns)
  * [Columns Set](#columns_set)
  * [Title](#title)
- * [Content](#inner_content)
+ * [Text](#text)
  * [Width](#width)
 * [Visual Settings](#visual_settings)
  * [Interlaced mode](#interlaced_mode)
@@ -26,7 +26,7 @@ The **set of columns** is set and defined using the {api:anychart.core.ui.DataGr
 
 ```
 //create new column contains names
-dataGrid.column(4).width(100).textFormatter(function(item) {
+dataGrid.column(4).width(100).format(function(item) {
     return item.get('name');
   }).title('Resources');
 ```
@@ -39,7 +39,7 @@ var firstColumn = dataGrid.column(10);
 var secondColumn = dataGrid.column(20);
 ```
 
-For more information about the {api:anychart.core.ui.DataGrid.Column#textFormatter}textFormatter(){api} method see the [Content](#inner_content) topic.
+For more information about the {api:anychart.core.ui.DataGrid.Column#format}format(){api} method see the [Text](#text) topic.
 
 The sample below shows Resource Gantt Chart, note that the third column is created to display the start data value.
 
@@ -72,13 +72,12 @@ title.fontWeight("bold").fontStyle("italic");
 title.hAlign("left");
 ```
 
-<a name="inner_content">
-### Content
+### Text
 
-Column content can be tuned as well as its title. The easiest way to manage column content is [using presets](./DataGrid_Column_Presets). The advanced one is {api:anychart.core.ui.DataGrid.Column#textFormatter}textFormatter(){api} method. It used to define a cell text value formatter, so you can pass your own custom function as an argument.
+Column content can be tuned as well as its title. The easiest way to manage column content is [using presets](./DataGrid_Column_Presets). The advanced one is {api:anychart.core.ui.DataGrid.Column#format}format(){api} method. It used to define a cell text value formatter, so you can pass your own custom function as an argument.
 ```
 //create a column contains all IDs
-column.textFormatter(function(item) {
+column.format(function(item) {
     return item.get('id') + '';
 });
 ```
@@ -87,10 +86,10 @@ Or it can be more complicated:
 
 ```
 //create the third column
-dataGrid.column(2).textFormatter(customColumnTextFormatter);
+dataGrid.column(2).format(customColumnformat);
 
 //define a custom content with actual start values
-function customColumnTextFormatter(item){
+function customColumnformat(item){
     var start = item.get("actualStart");
     var end = item.get("actualEnd");
     var duration = end - start;
@@ -103,7 +102,7 @@ function customColumnTextFormatter(item){
 }
 ```
 
-Here is a sample with the complex {api:anychart.core.ui.DataGrid.Column#textFormatter}textFormatter(){api}.
+Here is a sample with the complex {api:anychart.core.ui.DataGrid.Column#format}format(){api}.
 
 {sample :width 690 :height 220}GANTT\_Chart\_17{sample}
 
@@ -180,11 +179,11 @@ Use these methods to change the rows fill color of the main chart plot:
 <td>Description</td>
 </tr>
 <tr>
-<td>{api:anychart.core.gantt.Timeline#rowOddFill}rowOddFill(){api}</td>
+<td>{api:anychart.core.ui.Timeline#rowOddFill}rowOddFill(){api}</td>
 <td>Used to set row odd fill.</td>
 </tr>
 <tr>
-<td>{api:anychart.core.gantt.Timeline#rowEvenFill}rowEvenFill(){api}</td>
+<td>{api:anychart.core.ui.Timeline#rowEvenFill}rowEvenFill(){api}</td>
 <td>Used to set row even fill.</td>
 </tr>
 </tbody>

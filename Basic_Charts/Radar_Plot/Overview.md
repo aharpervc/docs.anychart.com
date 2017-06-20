@@ -66,7 +66,7 @@ Here is the radar chart sample with starting angle shifted to 90°:
 
 ### Plot background
 
-You can change radar background using {api:anychart.core.ui.Background}background(){api} method, learn more about this method at [Background settings tutorial](../Appearance_Settings/Background).
+You can change radar background using {api:anychart.core.ui.Background}background(){api} method, learn more about this method at [Background settings tutorial](../../Appearance_Settings/Background).
 
 ```
 var background = chart.background();
@@ -86,7 +86,7 @@ Here is a Radar chart with tuned background:
 
 ## Axes
 
-In AnyChart axis is an object that allows you to configure chart grid, axis line along with tick marks and labels, axis scale and settings and else. All axis features are described in [Axes Basics](../Axes_and_Grids/Axis_Basics) tutorial.
+In AnyChart axis is an object that allows you to configure chart grid, axis line along with tick marks and labels, axis scale and settings and else. All axis features are described in [Axes Basics](../../Axes_and_Grids/Axis_Basics) tutorial.
 
 ### Stroke
 
@@ -102,7 +102,7 @@ var yAxis = chart.yAxis();
 yAxis.stroke("2 #9900FF");
 ```
 
-More information about possible stroke settings can be found in [Strokes and Lines tutorial](../Appearance_Settings/Strokes_and_Lines).
+More information about possible stroke settings can be found in [Strokes and Lines tutorial](../../Graphics/Stroke_Settings).
 
 Here is a sample of a chart with tuned X and Y axes. Y-axis dashed stroke and X-axis has a stroke colored with gradient.
 
@@ -122,7 +122,7 @@ Look at the demonstration of Y-Axis inversion in the sample below:
 
 ### Logarithmic Scale
 
-You can set a logarithmic scale type using {api:anychart.scales.Logarithmic}scale(){api} method. More information about scale types can be found in [Scale tutorial](../Axes_and_Grids/Scales#types)
+You can set a logarithmic scale type using {api:anychart.scales.Logarithmic}scale(){api} method. More information about scale types can be found in [Scale tutorial](../../Axes_and_Grids/Scales#types)
 
 ```
 // create logarithmic scale
@@ -170,12 +170,12 @@ var chart = anychaty.radarChart();
 var xLabels = chart.xAxis().labels();
 xLabels.useHtml(true);
 // set labels content
-xLabels.textFormatter("<b>{%Value}</b>");
+xLabels.format("<b>{%Value}</b>");
 ```
 
 {sample}BCT\_RadarChart\_09{sample}
 
-You can change labels' background. Learn more about background configuration in [Background settings tutorial](../Appearance_Settings/Background).
+You can change labels' background. Learn more about background configuration in [Background settings tutorial](../../Appearance_Settings/Background).
 
 ```
   var xLabels = chart.xAxis().labels();
@@ -231,7 +231,7 @@ grid.evenFill("darkred");
 grid.layout("radial");
 ```
 
-**Note:** full information on grid settings can be found in [Grid section of Scale tutorial](../Axes_and_Grids/Scales#grids)
+**Note:** full information on grid settings can be found in [Grid section of Scale tutorial](../../Axes_and_Grids/Scales#grids)
 
 Sample below demonstrates two radar charts with adjusted visualisation of the radial type of grid as well as of the circular one.
 
@@ -255,14 +255,14 @@ var labels = series.labels();
 // enables labels
 labels.enabled(true);
 // setting content
-labels.textFormatter(function(point){
+labels.format(function(point){
   return point.x;
 });
 
 // setting tooltips
 var tooltip = series.tooltip();
 // setting content
-tooltip.textFormatter("{%x}");
+tooltip.format("{%x}");
 ```
 
 Sample below has more complex tooltip than snippet above. Click 'Launch in playground' to see format settings of a tooltip.
@@ -271,6 +271,6 @@ Sample below has more complex tooltip than snippet above. Click 'Launch in playg
 
 ## Series Types
 
-Radar js graphs supports Line, Area and Marker series types. You can learn how to change and configure styles of these types at: [Area chart](Area_Chart), [Line chart](Line-Spline-StepLine_Charts) and [Marker chart](Marker_Chart).
+Radar js graphs supports Line, Area and Marker series types. You can learn how to change and configure styles of these types at: [Area chart](../Area_Chart), [Line chart](../Line_Chart) and [Marker chart](../Marker_Chart).
 
 {sample}BCT\_RadarChart\_14{sample}

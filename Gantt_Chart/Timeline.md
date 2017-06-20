@@ -16,14 +16,14 @@ Timeline of a Project Chart is rather different from a timeline of a Resoure Gan
 ### Resource Gantt Chart
 This illustration highlights almost all major resource timeline elements, and this tutorial will describe how each element is configured:
 
-<img width="700" src ="http://static.anychart.com/images/resource_timeline.jpg" />
+<img width="700" src ="https://static.anychart.com/images/resource_timeline.jpg" />
 
 You can look up the [Resource Chart](Resource_Chart) article to know more about managing Gantt Charts of this type.
 
 ### Project Gantt Chart
 This illustration highlights almost all major project timeline elements, and this tutorial will describe how each element is configured:
 
-<img width="700" src ="http://static.anychart.com/images/project_timeline.jpg" />
+<img width="700" src ="https://static.anychart.com/images/project_timeline.jpg" />
 
 You can look up the [Project Chart](Project_Chart) article to know more about managing Gantt Charts of this type.
 
@@ -52,8 +52,9 @@ tl.lineMarker(1).value(now + 5*day);
 
 {sample :width 825 :height 230 }GANTT\_Timeline\_01{sample}
 
-As you see, we can define some parameters of each linemarker such as color, dashes or thickness using {api:anychart.axisMarkers.Line#stroke}.stroke(){api} method. It is used absolutely the same way as any other line settings with the
-{api:anychart.axisMarkers.Line#stroke}.stroke(){api} method.
+As you see, we can define some parameters of each linemarker such as color, dashes or thickness using {api:anychart.core.axisMarkers.Line#stroke}.stroke(){api} method.
+It is used absolutely the same way as any other line settings with the
+{api:anychart.core.axisMarkers.Line#stroke}.stroke(){api} method.
 
 Now, look at the sample with a textMarker showing the planned finish date and a rangeMarker showing the remaining time.
 
@@ -102,7 +103,7 @@ The following Enums can be used to make timeling configuration easier:
 
 Due to unique organization of a Gantt diagram, there are some special features that should be mentioned.
 
-* Any type of Gantt diagram will return "false" for {api:anychart.axisMarkers.Line#isHorizontal}.isHorizontal(){api} method, because markers in Gantts can be only vertical.
+* Any type of Gantt diagram will return "false" for {api:anychart.core.axisMarkers.Line#isHorizontal}.isHorizontal(){api} method, because markers in Gantts can be only vertical.
 * The **scale** and **layout** methods will not work here, only "dateTime" scale and "vertical" layout are available in Gantt Chart.
 * There are three special values for setting to the text markers' {api:anychart.core.axisMarkers.GanttText#value}.value(){api} method: "start" and "end" to the range markers' {api:anychart.core.axisMarkers.GanttRange#from}.from(){api} and {api:anychart.core.axisMarkers.GanttRange#to}.to(){api}. The "value" returns the current date, "start" - the start date of the gantt chart timeline and "end" returns the end date of the whole Gantt diagram.
 

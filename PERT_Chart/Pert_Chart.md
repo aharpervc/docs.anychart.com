@@ -19,7 +19,6 @@ PERT Chart
  * [Tooltips](#tooltips)
  * [Statistics](#statistics)
 
-
 ## Overview
 
 The PERT Chart (also known as PERT Diagram) is a chart type realizes the Project Evaluation and Review Technique technology. It is applied mostly in large-scale projects where time is the major factor and allows to schedule a project without knowing precisely the details and durations of all activities. Find more information about PERT technology and using it in [PERT Overview](Overview).
@@ -28,7 +27,7 @@ This article explains how to create a basic Pert Chart as well as configure sett
 
 Pert Chart Data should be arranged as array of objects, where ID's of the tasks are necessary to be created. Extra data can be added if necessary. Read more about setting and managing the data in the [PERT Data](Data) article.
 
-See also: <a href="http://www.anychart.com/chartopedia/chart-types/pert-chart/" target="_blank">Chartopedia: PERT Chart</a>
+See also: <a href="https://www.anychart.com/chartopedia/chart-types/pert-chart/" target="_blank">Chartopedia: PERT Chart</a>
 
 ## Quick Start
 
@@ -105,7 +104,7 @@ chart.listen("pointsselect", function(e){
 
 ### Appearance
 
-There are two basic classes of elements in PERT: milestones and tasks. Also there is a critical path consists of both tasks and milestones. All of them have visual settings, which can be found in the [Pert Settings Article](Settings).
+There are two basic classes of elements in PERT: milestones and tasks. Also there is a critical path consists of both tasks and milestones.
 
 Learn more about colors and visual appearance of the chart from the [Appearance Settings](../Appearance_Settings) section.
 
@@ -120,7 +119,6 @@ Here is a full list of methods used to configure coloring settings of the tasks 
 * {api:anychart.core.pert.Tasks#hoverFill}hoverFill(){api}, {api:anychart.core.pert.Tasks#hoverStroke}hoverStroke(){api} configure the visual settings on hover
 
 * {api:anychart.core.pert.Tasks#selectFill}selectFill(){api}, {api:anychart.core.pert.Tasks#selectStroke}selectStroke(){api} configure tasks' visual settings on select
-
 
 In the sample below, there is a Pert Chart with some of the appearance settings configured:
 
@@ -138,7 +136,6 @@ tasks.selectFill("#519790", 2);
 ```
 
 {sample}Pert\_Settings\_01{sample}
-
 
 ### Duration calculation
 
@@ -163,7 +160,6 @@ chart.title("The duration equals " + duration);
 
 {sample}Pert\_Settings\_01\_1{sample}
 
-
 ### Dummy Tasks
 
 Dummy tasks are visual representations of dependencies between real tasks. Dummy task does not exist as a real task, does not affect the project duration (the duration of a dummy task equals 0) and connects milestones of real tasks for better visualization.
@@ -178,7 +174,6 @@ tasks.dummyStroke("#000", 0.5, "5 2");
 
 {sample}Pert\_Settings\_02{sample}
 
-
 ### Earliest and latest
 
 Earliest and latest start and finish values are automatically calculated from the optimistic, pessimistic and most likely values or from duration value. These values are a good help in planning, as they show the most favorable and the worst time frames so they can be noticed in time and changed if critical.
@@ -187,14 +182,11 @@ The following sample shows how to demonstrate those values to watch them:
 
 ```
 // set labels with earliest and latest values
-upperLabels = tasks.upperLabels();
-upperLabels.format("ES: {%earliestStart}, LS: {%latestStart}");
-lowerLabels = tasks.lowerLabels();
-lowerLabels.format("EF: {%earliestFinish}, LF: {%latestFinish}");
+tasks.upperLabels().format("ES: {%earliestStart}, LS: {%latestStart}");
+tasks.lowerLabels().format("EF: {%earliestFinish}, LF: {%latestFinish}");
 ```
 
 {sample}Pert\_Settings\_03{sample}
-
 
 ### Slacks
 
@@ -204,14 +196,12 @@ The following example demonstrates the efficiency of the resources distribution 
 
 ```
 // set the slacks to the tasks labels
-labels = chart.tasks().lowerLabels();
-labels.format(function(e){
+chart.tasks().lowerLabels().format(function(e){
     return "Slack: " + e.slack;
 });
 ```
 
 {sample}Pert\_Settings\_04{sample}
-
 
 ### Milestones 
 
@@ -238,7 +228,6 @@ milestones.selectStroke("#90caf9", 4);
 
 {sample}Pert\_Settings\_05{sample}
 
-
 ### Critical Path 
 
 Critical Path consists of milestones and tasks. If nothing special is set for the critical path, the visual settings of those elements will be taken from defaults. If you prefer to emphasize the critical path by changing the visual settings for its components, use the {api:anychart.charts.Pert#criticalPath}criticalPath(){api} method.
@@ -254,11 +243,12 @@ milestones.labels().fontColor("#86614e");
 tasks = chart.criticalPath().tasks();
 tasks.stroke("#ffab91");
 ```
+
 {sample}Pert\_Settings\_06{sample}
 
 ### Labels
 
-[Labels](../Common_Settings/Labels) are text or image elements that can be placed anywhere on any chart (you can enable them on a whole series or in a single point). For text labels, font settings and [text formatters](../Common_Settings/Text_Formatters) are available. There are some special settings for the PERT Chart labels, which can be found in the [PERT Labels Settings](Settings#labels) article.
+[Labels](../Common_Settings/Labels) are text or image elements that can be placed anywhere on any chart (you can enable them on a whole series or in a single point). For text labels, font settings and [text formatters](../Common_Settings/Text_Formatters) are available.
 
 Though, besides the colors and spacing, there are some special settings for the tasks' labels. Due to a specific shape, tasks have upper and lower labels, and it is possible to adjust both. Use the {api:anychart.core.pert.Tasks#upperLabels}upperLabels(){api} and {api:anychart.core.pert.Tasks#lowerLabels}lowerLabels(){api} methods for it.
 
@@ -307,10 +297,12 @@ A [Tooltip](../Common_Settings/Tooltip) is a text box displayed when a point on 
 There are two statistic values can be got from the Pert Chart: standard deviation and the critical path duration. Use {api:anychart.charts.Pert#getStat}getStat(){api} method for both.
 
 ```
-// get both statistic values on click
-chart.milestones(). listen("click", function(){
-  dev = chart.getStat("pertChartCriticalPathStandardDeviation");
-  alert("Standard deviation for this project is " + dev);
-})
+// get both statistic values when rendered
+chart.listen("chartdraw", function(){
+    deviation = chart.getStat("pertChartCriticalPathStandardDeviation");
+    duration = chart.getStat("pertChartProjectDuration");
+    chart.title("The critical path duration makes " + duration.toFixed(2) + 
+    " units \n Standard deviation for this project is " + deviation.toFixed(2) + " units");
+});
 ```
 {sample}Pert\_Settings\_09{sample}

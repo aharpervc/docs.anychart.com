@@ -23,7 +23,7 @@ The Line and Spline chart types share all the settings, so this article explains
 <tr><td>Stacked</td><td>N/A</td></tr>
 <tr><td>Vertical</td><td>[Vertical Spline](Vertical/Spline_Chart)</td></tr>
 <tr><td>3D</td><td>N/A</td></tr>
-<tr><td>Error Bars</td><td>[Spline Chart with Error Bars](Error_Chart)</td></tr>
+<tr><td>Error Bars</td><td>[Spline Chart with Error Bars](Error_Chart/Spline_Chart)</td></tr>
 <tr><th colspan=2>SUPPORTED CHART PLOTS</th></tr>
 <tr><td>Polar</td><td>N/A</td></tr>
 <tr><td>Radar</td><td>N/A</td></tr>
@@ -33,7 +33,7 @@ The Line and Spline chart types share all the settings, so this article explains
 <tr><td></td><td>[Line](Line_Chart)</td></tr>
 <tr><td></td><td>[Step Line](Step_Line_Chart)</td></tr>
 <tr><th colspan=2>SEE ALSO</th></tr>
-<tr><td></td><td><a href="http://www.anychart.com/chartopedia/chart-types/spline-chart/" target="_blank">Chartopedia: Spline Chart</a></td></tr>
+<tr><td></td><td><a href="https://www.anychart.com/chartopedia/chart-types/spline-chart/" target="_blank">Chartopedia: Spline Chart</a></td></tr>
 <tr><td></td><td>[General Settings](General_Settings)</td></tr>
 </table>
 

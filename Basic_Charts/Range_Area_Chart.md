@@ -28,7 +28,7 @@ This article explains how to create a basic Range Area chart as well as configur
 <tr><td>Stacked</td><td>N/A</td></tr>
 <tr><td>Vertical</td><td>[Vertical Range Area](Vertical/Range_Area_Chart)</td></tr>
 <tr><td>3D</td><td>N/A</td></tr>
-<tr><td>Error Bars</td><td>[Range Area Chart with Error Bars](Error_Chart)</td></tr>
+<tr><td>Error Bars</td><td>N/A</td></tr>
 <tr><th colspan=2>SUPPORTED CHART PLOTS</th></tr>
 <tr><td>Polar</td><td>N/A</td></tr>
 <tr><td>Radar</td><td>N/A</td></tr>
@@ -41,7 +41,7 @@ This article explains how to create a basic Range Area chart as well as configur
 <tr><td></td><td>[Range Spline Area](Range_Spline_Area_Chart)</td></tr>
 <tr><td></td><td>[Range Step Area](Range_Step_Area_Chart)</td></tr>
 <tr><th colspan=2>SEE ALSO</th></tr>
-<tr><td></td><td><a href="http://www.anychart.com/chartopedia/chart-types/range-area-chart/" target="_blank">Chartopedia: Range Area Chart</a></td></tr>
+<tr><td></td><td><a href="https://www.anychart.com/chartopedia/chart-types/range-area-chart/" target="_blank">Chartopedia: Range Area Chart</a></td></tr>
 <tr><td></td><td>[General Settings](General_Settings)</td></tr>
 </table>
 
@@ -104,7 +104,7 @@ Here is a full list of methods used to configure visual settings that are availa
 * {api:anychart.core.cartesian.series.RangeArea#hoverFill}hoverFill(){api}, {api:anychart.core.cartesian.series.RangeArea#hoverHatchFill}hoverHatchFill(){api}, {api:anychart.core.cartesian.series.RangeArea#hoverStroke}hoverStroke(){api} configure the visual settings on hover
 * {api:anychart.core.cartesian.series.RangeArea#selectFill}selectFill(){api}, {api:anychart.core.cartesian.series.RangeArea#selectHatchFill}selectHatchFill(){api}, {api:anychart.core.cartesian.series.RangeArea#selectStroke}selectStroke(){api} configure the visual settings on select
 
-You can learn more from the [Appearance Settings](../Appearance_Settings) article.
+You can learn more from the [Appearance Settings](../Appearance_Settings) section.
 
 In the sample below, there are two Range Area series with some of the appearance settings configured:
 
@@ -149,6 +149,6 @@ Most types of series in AnyChart can be drawn both in horizontal and vertical or
 
 Here is the information about creating Vertical Range Area series:
 
-* [Vertical Range Area](Vertical/Ragne_Area_Chart)
+* [Vertical Range Area](Vertical/Range_Area_Chart)
 * [Vertical Range Spline Area](Vertical/Range_Spline_Area_Chart)
 * [Vertical Range Step Area](Vertical/Range_Step_Area_Chart)

@@ -15,7 +15,7 @@
 // that makes it possible to set coordinates
 // for the points and labels on the map and
 // required for custom projections and grid labels formatting.
-// See http://docs.anychart.com/latest/Maps/Map_Projections
+// See https://docs.anychart.com/latest/Maps/Map_Projections
 
 // create data set
 var dataSet = anychart.data.set([
@@ -37,15 +37,15 @@ map.geoData(anychart.maps.australia);
 //create bubble series
 var series = map.bubble(dataSet);
 
-series.labels().textFormatter(function(){
+series.labels().format(function(){
     return (this.id);
 });
 
-series.tooltip().textFormatter(function(){
+series.tooltip().format(function(){
     return (this.size + "th of tourists");
 });
 
-series.tooltip().titleFormatter(function(){
+series.tooltip().titleFormat(function(){
     return (this.id);
 });
 

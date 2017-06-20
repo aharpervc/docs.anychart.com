@@ -23,7 +23,7 @@
 // that makes it possible to set coordinates
 // for the points and labels on the map and
 // required for custom projections and grid labels formatting.
-// See http://docs.anychart.com/latest/Maps/Map_Projections
+// See https://docs.anychart.com/latest/Maps/Map_Projections
 
 // create data set
 var data = anychart.data.set([    
@@ -52,7 +52,7 @@ series.fill("maroon");
 series.stroke("maroon", 2);
 series.hoverStroke("maroon", 2);
 series.select("maroon", 2);
-series.tooltip().textFormatter("Basic border along which the hostilities took place");
+series.tooltip().format("Basic border along which the hostilities took place");
 
 // data set for the choropeth series
 var dataSet = anychart.data.set([
@@ -110,7 +110,7 @@ var dataSet = anychart.data.set([
 
 var ch_series = map.choropleth(dataSet);
 
-ch_series.tooltip().textFormatter("{%position}");
+ch_series.tooltip().format("{%position}");
 
 // set geodata 
 map.geoData(anychart.maps.united_states_of_america);

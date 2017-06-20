@@ -1,6 +1,6 @@
 {:index 7.1}
 
-#Range Selection UI
+# Range Selection UI
 
 * [Overview](#overview)
 * [Add to a chart](#add_to_a_chart)
@@ -15,7 +15,7 @@
 
 ## Overview
 
-AnyStock provides a lot of features and tools to a chart viewer to make the working process rather comfortable and easily navigate these time based charts. The core navigation tool is Scroller, which is described in [Scroller](Scroller) article. 
+Range Selection UI is on of the great chart navigation features AnyStock provides to a chart viewer to make the data mining process comfortable and easily navigate these time based charts. The core navigation tool is Scroller, which is described in [Scroller](Scroller) article. 
 
 **Range Selector** helps to use scroller by providing a set of buttons to select certain periods of time.
 
@@ -25,7 +25,7 @@ Both range selector and range picker are a part of {api:anychart.ui}anychart.ui{
 
 ```
 <script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
-<link rel="stylesheet" href="https://static.anychart.com/css/develop/anychart-ui.min.css" />
+<link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css" />
 ```
 
 Or, if you are using a specialized `anystock.min.js` you need to reference ui JavaScript file as well:
@@ -33,12 +33,12 @@ Or, if you are using a specialized `anystock.min.js` you need to reference ui Ja
 ```
 <script src="https://cdn.anychart.com/js/latest/anystock.min.js"></script>
 <script src="https://cdn.anychart.com/js/latest/anychart-ui.min.js"/>
-<link rel="stylesheet" href="http://static.anychart.com/css/develop/anychart-ui.min.css" />
+<link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css" />
 ```
 
 ## Add to a chart
 
-The easiest way to add range selector or range picker is to add them (render to) to an instance of a stock chart. You need to create them using constructor methods {api:}rangeSelector(){api} and {api:}rangePicker{api} before that:
+The easiest way to add range selector or range picker is to add them (render to) to an instance of a stock chart. You need to create them using constructor methods {api:anychart.ui.RangeSelector}rangeSelector(){api} and {api:anychart.ui.RangePicker}rangePicker{api} before that:
 
 ```
 chart = anychart.stock();
@@ -85,7 +85,7 @@ rangePicker.render("rangepickerContainer");
 
 ### Customizing preset periods
 
-To customize preset periods you need to access {api:api:anychart.ui.RangeSelector#ranges}ranges(){api} array and change the fields you want to change or remove items you don't want to see. Each element of this array is an object of {api:anychart.ui.RangeSelector.Range}Range{api} type and contains the following fields:
+To customize preset periods you need to access {api:anychart.ui.RangeSelector#ranges}ranges(){api} array and change the fields you want to change or remove items you don't want to see. Each element of this array is an object of {api:anychart.ui.RangeSelector.Range}Range{api} type and contains the following fields:
 
 <table>
 <tr>

@@ -16,7 +16,7 @@ Map Labels
 
 Labels in Maps are somewhat similar to the usual labels you can find and configure for any other chart type, with the common differences of keywords and the fact that some data is provided by the map source itself.
 
-To learn about Labels editing and formatting in general please visit [Text Settings](../Appearance_Settings/Text_Settings) and [Text Formatters](..\Common_Settings/Text_Formatters).
+To learn about Labels editing and formatting in general please visit [Text Settings](../Appearance_Settings/Text_Settings) and [Text Formatters](../Common_Settings/Text_Formatters).
 
 To learn about creating maps visit [Quick Start](Quick_Start) article.
 
@@ -105,7 +105,7 @@ Use the **regionProperties** property of the text formatter context to get any i
 
 ```
 // format labels text
-labels.textFormatter(function () {
+labels.format(function () {
     // Gets point source region properties.
     var properties = this.regionProperties;
     return properties["postal"] + " (" + properties["type"] + ")";
@@ -234,7 +234,7 @@ These properties can be set through the GeoJSON code:
 Put the GeoJSON code with edits as a function into the JS file and link the last:
 
 ```
-<script src="http://static.anychart.com/data/maps/docs/australia_with_settings.js"></script>
+<script src="https://static.anychart.com/data/maps/docs/australia_with_settings.js"></script>
 ```
 
 Then load the data from the JS file:
@@ -341,10 +341,10 @@ calloutRight.length(100);
 
 {sample}Maps\_Labels\_12{sample}
 
-The text that labels represent can be formatted as the usual labels text, but remember that formatting labels of the whole series will lead to changes in all labels of this series, so if you need to format only those labels that are shown in the callout element, use data set. It is possible to change the size of the label text through the {api:anychart.core.ui.LabelsFactory.Label#fontSize}fontSize(){api} method and {api:anychart.core.ui.LabelsFactory#connectorStroke}connnectorStroke(){api} method to set the color of the connector. The {api:anychart.core.ui.LabelsFactory.Label#textFormatter}textFormatter(){api} method allows to change the text displayed by the labels.
+The text that labels represent can be formatted as the usual labels text, but remember that formatting labels of the whole series will lead to changes in all labels of this series, so if you need to format only those labels that are shown in the callout element, use data set. It is possible to change the size of the label text through the {api:anychart.core.ui.LabelsFactory.Label#fontSize}fontSize(){api} method and {api:anychart.core.ui.LabelsFactory#connectorStroke}connnectorStroke(){api} method to set the color of the connector. The {api:anychart.core.ui.LabelsFactory.Label#format}format(){api} method allows to change the text displayed by the labels.
 
 ```
-{'id': 'AU.JB', 'value': 0, label:{textFormatter: "Jervis \nBay \nTerritory", fontColor: "white"}},
+{'id': 'AU.JB', 'value': 0, label:{format: "Jervis \nBay \nTerritory", fontColor: "white"}},
 {'id': 'AU.CT', 'value': 3, label:{fontColor: "white"}}
 ```
 

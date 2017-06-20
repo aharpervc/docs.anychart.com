@@ -186,9 +186,9 @@ var dataSet = anychart.data.set([
 
 ### Labels and Tooltips
 
-You can also alter the labels' and tooltips' appearance. Use standard methods such as {api:anychart.core.ui.Label#fontColor}fontColor(){api} for labels, format tooltips using {api:anychart.core.ui.Tooltip#textFormatter}textFormatter(){api} function. You can find everything about this in the [Labels](../Common_Settings/Labels) and [Tooltips](../Common_Settings/Tooltip) tutorial.
+You can also alter the labels' and tooltips' appearance. Use standard methods such as {api:anychart.core.ui.Label#fontColor}fontColor(){api} for labels, format tooltips using {api:anychart.core.ui.Tooltip#format}format(){api} function. You can find everything about this in the [Labels](../Common_Settings/Labels) and [Tooltips](../Common_Settings/Tooltip) tutorial.
 
-Let's now take a look at the couple of samples with labels and/or tooltips. First, let's change the font color with {api:anychart.ui.Label#fontColor}fontColor(){api}, change their size and format them a bit using {api:anychart.core.ui.LabelsFactory#textFormatter}textFormatter(){api} function.
+Let's now take a look at the couple of samples with labels and/or tooltips. First, let's change the font color with {api:anychart.core.ui.Label#fontColor}fontColor(){api}, change their size and format them a bit using {api:anychart.core.ui.LabelsFactory#format}format(){api} function.
 
 ```
 // set the text color 
@@ -196,8 +196,8 @@ series.labels().fontColor('black');
 series.labels().fontSize(10);
 
 // format the labels
-series.labels().textFormatter(function(){
-    return(this.getDataValue("name")+"\n"+this.size);
+series.labels().format(function(){
+    return(this.getData("name")+"\n"+this.size);
 });
 ```
 
@@ -205,7 +205,7 @@ series.labels().textFormatter(function(){
 
 Find out more about Text Formatters [here](../Common_Settings/Text_Formatters).
 
-Labels are enabled by default, they can be turned on and off using the {api:anychart.ui.Label#enable}enable(){api} method as usual.
+Labels are enabled by default, they can be turned on and off using the {api:anychart.core.ui.Label#enable}enable(){api} method as usual.
 
 {sample}Maps\_Proportional\_Symbol\_11{sample}
 

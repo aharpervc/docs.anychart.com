@@ -1,4 +1,4 @@
-{:index 1}
+{:index 1.61}
 #Pie Chart
 
 * [Overview](#overview)
@@ -31,7 +31,7 @@ This article explains how to create a basic Pie chart as well as configure setti
 <tr><th colspan=2>OPTIONS</th></tr>
 <tr><td>Stacked</td><td>N/A</td></tr>
 <tr><td>Vertical</td><td>N/A</td></tr>
-<tr><td>3D</td><td>[3D Pie](3D_Charts/3D_Pie_Chart)</td></tr>
+<tr><td>3D</td><td>[3D Pie](3D/Pie_Chart)</td></tr>
 <tr><td>Error Bars</td><td>N/A</td></tr>
 <tr><th colspan=2>SUPPORTED CHART PLOTS</th></tr>
 <tr><td>Polar</td><td>N/A</td></tr>
@@ -41,7 +41,7 @@ This article explains how to create a basic Pie chart as well as configure setti
 <tr><th colspan=2>RELATED TYPES</th></tr>
 <tr><td></td><td>[Doughnut](Doughnut_Chart)</td></tr>
 <tr><th colspan=2>SEE ALSO</th></tr>
-<tr><td></td><td><a href="http://www.anychart.com/chartopedia/chart-types/pie-chart/" target="_blank">Chartopedia: Pie Chart</a></td></tr>
+<tr><td></td><td><a href="https://www.anychart.com/chartopedia/chart-types/pie-chart/" target="_blank">Chartopedia: Pie Chart</a></td></tr>
 <tr><td></td><td>[General Settings](General_Settings)</td></tr>
 </table>
 
@@ -86,7 +86,7 @@ Here is a full list of methods used to configure visual settings that are availa
 * {api:anychart.charts.Pie#fill}fill(){api}, {api:anychart.charts.Pie#hatchFill}hatchFill(){api}, {api:anychart.charts.Pie#stroke}stroke(){api} set the fill, hatch fill, and stroke
 * {api:anychart.charts.Pie#hoverFill}hoverFill(){api}, {api:anychart.charts.Pie#hoverHatchFill}hoverHatchFill(){api}, {api:anychart.charts.Pie#hoverStroke}hoverStroke(){api} configure the visual settings on hover
 
-You can learn more from the [Appearance Settings](../Appearance_Settings) article.
+You can learn more from the [Appearance Settings](../Appearance_Settings) section.
 
 In the sample below, there a Pie chart with some of the appearance settings configured:
 

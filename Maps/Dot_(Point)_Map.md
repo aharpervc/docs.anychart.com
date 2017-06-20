@@ -17,7 +17,7 @@ Dot (Point) Maps
 
 Dot Maps use dots (points, markers) to demonstrate the existence of a subject or a feature. It's a lot like Bubble Maps ([Proportional Symbol Maps](Proportional_Symbol_Map)), but the dots' sizes don't depend on their values, as there's no size setting. Usually the tooltips are formatted to show some information about points - so these maps are very useful and popular in census, tourism, health service and any other researches.
 
-Spreading points (or dots) across a Map is rather alike scatter (or marker) series. So, in AnyChart, this series in maps is of [Marker type](../Basic_Chart_Types/Marker_Chart).
+Spreading points (or dots) across a Map is rather alike scatter (or marker) series. So, in AnyChart, this series in maps is of [Marker type](../Basic_Charts/Marker_Chart).
 
 Note that when you use this type to draw density maps they must be drawn on an equal area map projection. This is critical - using a map projection which does not preserve the size of areas will distort the perceived density of the dots.
 
@@ -117,14 +117,14 @@ We can edit the appearance of our map as we want. We can change the color of the
 We can change our labels and tooltips behavior by using standard {api:anychart.core.map.series.Marker#labels}labels(){api} and {api:anychart.core.map.series.Marker#tooltip}tooltip(){api} methods. We can format the text and their appearance or disable them using those methods. Let's adjust tooltips to show no title and no separator but the yearly profit value. Look how it's done and format the labels also:
 
 ```
-    // format the tooltips
-    series_acme.tooltip({title: false, separator: false});
-    series_acme.tooltip().textFormatter("Yearly profit: ${%value}");
+// format the tooltips
+series_acme.tooltip({title: false, separator: false});
+series_acme.tooltip().format("Yearly profit: ${%value}");
 
-    // format the labels
-    series_acme.labels().fontSize(10)
-    series_acme.labels().fontColor("#000");
-    series_acme.labels().fontFamily("Georgia");
+// format the labels
+series_acme.labels().fontSize(10)
+series_acme.labels().fontColor("#000");
+series_acme.labels().fontFamily("Georgia");
 ```
 {sample}Maps\_Marker\_05{sample}
 
@@ -202,7 +202,7 @@ Another way to create unique markers is to set an image (or an array of images) 
     series_acme.hoverFill(customImageMarker(0.5));
 
     function customImageMarker(op){
-    var image_link = 'http://static.anychart.com/images/acme.jpg';
+    var image_link = 'https://static.anychart.com/images/acme.jpg';
       return {
           src: image_link,
             mode: 'fitMax',

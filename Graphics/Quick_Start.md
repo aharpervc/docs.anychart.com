@@ -19,11 +19,12 @@ You can use the link as shown below or download graphics.min.js from the [Graphi
 Add a block-based HTML element into your page, set the `id`, `width` and `height` attributes.
 
 Example:
+
 ```
 <body>
     <div id="container" style="width: 100%; height: 100%;"></div>
 </body>
-```  
+```
 
 ## Create a drawing
 
@@ -33,38 +34,39 @@ Example:
 
 ```
 <script>
-    // create a stage for the Deathly Hallows symbol
-    stage = anychart.graphics.create('container');
+// create a stage for the Deathly Hallows symbol
+stage = acgraph.create('container');
 
-    // draw the square
-    stage.rect(25, 50, 350, 300);
+// draw the square
+stage.rect(25, 50, 350, 300);
 
-    // draw the circle
-    stage.circle(200, 250, 100);
+// draw the circle
+stage.circle(200, 250, 100);
 
-    // draw the triangle
-    stage.path()
-        .moveTo(25, 350)
-        .lineTo(200, 50)
-        .lineTo(375, 350)
-        .close();
+// draw the triangle
+stage.path()
+    .moveTo(25, 350)
+    .lineTo(200, 50)
+    .lineTo(375, 350)
+    .close();
 
-    // draw the wand in the middle
-    stage.path()
-        .moveTo(200, 50)
-        .lineTo(200, 350);
+// draw the wand in the middle
+stage.path()
+    .moveTo(200, 50)
+    .lineTo(200, 350);
 </script>
 ```
   
 ## The result
 
-After all these steps you should have the following result. You can launch and explore this [GraphicsJS Drawing Sample in the Playground](http://playground.anychart.com/docs/latest/samples/GFX_quick_start-plain).
+After all these steps you should have the following result. You can launch and explore this [GraphicsJS Drawing Sample in the Playground](https://playground.anychart.com/docs/latest/samples/GFX_quick_start-plain).
 
 {sample}GFX\_quick\_start{sample}
 
 ###Full source code
 
 Below you can see how your full web page code should look like:
+
 ```
 <!doctype html>
 <html>
@@ -76,7 +78,7 @@ Below you can see how your full web page code should look like:
     <div id="container" style="width: 100%; height: 100%"></div>
     <script>
         // create a stage for the Deathly Hallows symbol
-        stage = anychart.graphics.create('container');
+        stage = acgraph.create('container');
 
         // draw the square
         stage.rect(25, 50, 350, 300);
@@ -114,7 +116,7 @@ Also, you can copy and paste this code to a file on your computer and run it in 
 ### Subscribe
 
 * Follow us on [Facebook](https://www.facebook.com/AnyCharts) and [Twitter](https://twitter.com/intent/follow?&screen_name=anychart&original_referer=http%3A%2F%2Fdocs.anychart.com)
-* Read the [blog](http://www.anychart.com/blog/)
+* Read the [blog](https://www.anychart.com/blog/)
 
 
 

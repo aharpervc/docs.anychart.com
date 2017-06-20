@@ -16,7 +16,7 @@ anychart.onDocumentReady(function () {
     // that makes it possible to set coordinates
     // for the points and labels on the map and
     // required for custom projections and grid labels formatting.
-    // See http://docs.anychart.com/latest/Maps/Map_Projections
+    // See https://docs.anychart.com/latest/Maps/Map_Projections
 
     // create the dataset of points that are defined by the region id
     var dataSet_id = anychart.data.set([
@@ -36,11 +36,11 @@ anychart.onDocumentReady(function () {
     var series_id = australiaMap.marker(dataSet_id);
 
     //format the labels of the id-defined series
-    series_id.labels().textFormatter(function(e){
+    series_id.labels().format(function(e){
       return e.name;
     });
 
-    series_id.tooltip().textFormatter("Id: {%id} \nSheep farms: {%farms}");
+    series_id.tooltip().format("Id: {%id} \nSheep farms: {%farms}");
 
     // hovered and selected labels
     series_id.hoverLabels().fontColor("black");

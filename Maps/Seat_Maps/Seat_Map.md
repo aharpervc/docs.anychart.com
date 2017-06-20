@@ -22,7 +22,7 @@ A seat map is a diagram of a seat layout inside a passenger aircraft, theater, s
 
 ## Preparing an SVG Image
 
-To create a seat map with AnyMap, you need an SVG image formatted in a specific way. Read the [Custom SVG Maps](Custom_SVG_Maps) article to learn how an existing SVG image can be loaded, and how it should be formatted.
+To create a seat map with AnyMap, you need an SVG image formatted in a specific way. Read the [Custom SVG Maps](../Custom_SVG_Maps) article to learn how an existing SVG image can be loaded, and how it should be formatted.
 
 If you need to create your own SVG picture in a graphic editor, study the [Preparing SVG Image](Preparing_SVG_Image) article.
 
@@ -43,7 +43,7 @@ To load the SVG file, use an .ajax request:
 ```
 $.ajax({
 type: "GET",
-url: "http://static.anychart.com/images/docs/seat_map/house.svg",
+url: "https://static.anychart.com/images/docs/seat_map/house.svg",
 ```
 
 {sample}Maps\_Seat\_01{sample}
@@ -53,7 +53,7 @@ url: "http://static.anychart.com/images/docs/seat_map/house.svg",
 Another way to add an SVG image is to put it directly into the script as a string. This way may suit you if the SVG code is not too long.
 
 ```
-svgString = "<svg xmlns='http://www.w3.org/2000/svg'>" +
+svgString = "<svg xmlns='https://www.w3.org/2000/svg'>" +
             "<g data-ac-wrapper-id='3'>" +
             "<circle id='1' cx='50' cy='50' r='20'></circle>" +
             "<circle id='2' cx='150' cy='40' r='30'></circle>" +
@@ -83,7 +83,7 @@ anychart.onDocumentLoad(function() {
   // note that you should use onDocumentLoad to get the image
   var imageElement = document.getElementById("house");
 ```
-Take a look at the <a href="http://www.anychart.com/demos/seatmap/html-dom-embed.html">AnyChart Seat Map sample</a> with an SVG file loaded from the HTML DOM.
+Take a look at the <a href="https://www.anychart.com/demos/seatmap/html-dom-embed.html">AnyChart Seat Map sample</a> with an SVG file loaded from the HTML DOM.
 
 ## Mapping Data
 
@@ -148,7 +148,7 @@ chart.unboundRegions("hide");
 
 ### Labels and Tooltips
 
-To configure labels and tooltips, use the {api:anychart.charts.Map#label}label(){api} and {api:anychart.charts.Map#tooltip}tooltip(){api} methods. Working with labels and tooltips in Seat Maps is absolutely identical to working with labels and tooltips in Maps, so you can learn more from the [Map Tooltips](Maps/Tooltips) and [Map Labels](Maps/Labels) articles.
+To configure labels and tooltips, use the {api:anychart.charts.Map#label}label(){api} and {api:anychart.charts.Map#tooltip}tooltip(){api} methods. Working with labels and tooltips in Seat Maps is absolutely identical to working with labels and tooltips in Maps, so you can learn more from the [Map Tooltips](../Tooltips) and [Map Labels](../Labels) articles.
 
 ```
 // data set
@@ -163,20 +163,20 @@ To configure labels and tooltips, use the {api:anychart.charts.Map#label}label()
 // enable labels and adjust them
 labels.enabled(false);
 series.labels({fontSize: 10});
-labels.textFormatter("{%id} \n{%info} \n{%sq}");
+labels.format("{%id} \n{%info} \n{%sq}");
 ```
 
 {sample}Maps\_Seat\_06{sample}
 
-To change the information shown in tooltips, use the {api:anychart.charts.Map#tooltip}tooltip(){api} method. Text in the tooltip title and text in the tooltip body are formatted using the {api:anychart.core.ui.ChartTooltip#titleFormatter}titleFormatter(){api} and {api:anychart.core.ui.ChartTooltip#textFormatter}textFormatter(){api} methods. Find more information about tooltips in our [Tooltips](../../Common_Settings/Tooltip) and [Map Tooltips](../Tooltips) articles.
+To change the information shown in tooltips, use the {api:anychart.charts.Map#tooltip}tooltip(){api} method. Text in the tooltip title and text in the tooltip body are formatted using the {api:anychart.core.ui.Tooltip#titleFormat}titleFormat(){api} and {api:anychart.core.ui.Tooltip#format}format(){api} methods. Find more information about tooltips in our [Tooltips](../../Common_Settings/Tooltip) and [Map Tooltips](../Tooltips) articles.
 
 ```
 // set the tooltips
 tooltips = series.tooltip();
 
 // set the tooltips titles and body texts
-tooltips.titleFormatter("{%id}");
-tooltips.textFormatter("{%info}");
+tooltips.titleFormat("{%id}");
+tooltips.format("{%info}");
 
 // set the tooltips colors
 tooltips.background("green 0.8");
@@ -187,4 +187,4 @@ tooltips.separator("white");
 
 ## Gallery Samples
 
-You can find samples of using SVG images in seat maps in [AnyMap: Seat Maps Gallery](http://www.anychart.com/products/anymap/gallery/Seat_Maps/). 
+You can find samples of using SVG images in seat maps in [AnyMap: Seat Maps Gallery](https://www.anychart.com/products/anymap/gallery/Seat_Maps/).

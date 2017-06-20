@@ -15,13 +15,13 @@
     // that makes it possible to set coordinates
     // for the points and labels on the map and
     // required for custom projections and grid labels formatting.
-    // See http://docs.anychart.com/latest/Maps/Map_Projections
+    // See https://docs.anychart.com/latest/Maps/Map_Projections
 
   map = anychart.map();
 
   // data set for the choropleth series
   var dataSet_1 = anychart.data.set([
-    {'id': 'AU.JB', 'value': 1.5, label:{textFormatter: "Jervis \nBay \nTerritory", fontColor: "white"}},
+    {'id': 'AU.JB', 'value': 1.5, label:{format: "Jervis \nBay \nTerritory", fontColor: "white"}},
     {'id': 'AU.NT', 'value': 2},
     {'id': 'AU.WA', 'value': 3.2},
     {'id': 'AU.NS', 'value': 2.7}
@@ -53,8 +53,8 @@
   map.overlapMode("noOverlap");
 
   // set tooltips
-  series_1.tooltip().textFormatter("More women");
-  series_2.tooltip().textFormatter("More men");
+  series_1.tooltip().format("More women");
+  series_2.tooltip().format("More men");
 
   // create callouts
   calloutRight = map.callout(0);

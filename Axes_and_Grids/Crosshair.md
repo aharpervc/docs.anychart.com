@@ -16,7 +16,7 @@ Crosshair is a pair of perpendicular lines (horizontal and vertical), moving wit
 
 Crosshair listens to these events: mouseMove, mouseOver, mouseOut, when mouse is inside the DataPlot box, Crosshair appears. Note that Crosshairs can have only one label each axis (one label on x-axis and another on y-axis).
 
-Crosshairs can be used on all Cartesians ([Area](../Basic_Charts/Area_Chart), [Line](../Basic_Charts/Line-Spline-StepLine_Charts), [Bar](../Basic_Charts/Bar_Chart), [Column](../Basic_Charts/Column_Chart), etc.) and [Scatter Charts](../Basic_Charts/Scatter_Chart).
+Crosshairs can be used on all Cartesians ([Area](../Basic_Charts/Area_Chart), [Line](../Basic_Charts/Line_Chart), [Spline](../Basic_Charts/Spline_Chart), [Step Line](../Basic_Charts/Step_Line_Chart), [Bar](../Basic_Charts/Bar_Chart), [Column](../Basic_Charts/Column_Chart), etc.) and [Scatter Charts](../Basic_Charts/Scatter_Plot/Overview).
  
 ## Enable           
  
@@ -71,12 +71,12 @@ crosshair.yLabel(false);
 
 ### Change text
 
-The crosshair label's format is the same as axis label's format by default. You may use the {api:anychart.core.ui.CrosshairLabel#textFormatter}textFormatter(){api} to change the crosshair's labels' performance. 
+The crosshair label's format is the same as axis label's format by default. You may use the {api:anychart.core.ui.CrosshairLabel#format}format(){api} to change the crosshair's labels' performance. 
 
 ```
 // set the label performance
 var yLabel = chart.crosshair().yLabel();
-yLabel.textFormatter(function() {
+yLabel.format(function() {
   return "$" + this.value;
 });
 ```
@@ -85,6 +85,6 @@ Here is the sample with customized both x and y crosshair labels.
 
 {sample}AGST\_Crosshair\_05{sample}
 
-As far as you can use any function as {api:anychart.core.ui.CrosshairLabel#textFormatter}textFormatter(){api} of crosshair labels you use these labels to display additional information. Here is a sample with more complex labels formatter.
+As far as you can use any function as {api:anychart.core.ui.CrosshairLabel#format}format(){api} of crosshair labels you use these labels to display additional information. Here is a sample with more complex labels formatter.
 
 {sample}AGST\_Crosshair\_06{sample}

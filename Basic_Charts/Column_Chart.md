@@ -30,8 +30,8 @@ This article explains how to create a basic Column chart as well as configure se
 <tr><th colspan=2>OPTIONS</th></tr>
 <tr><td>Stacked</td><td>[Stacked Column](Stacked/Value/Column_Chart), [Percent Stacked Column](Stacked/Percent/Column_Chart)</td></tr>
 <tr><td>Vertical</td><td>[Bar](Bar_Chart)</td></tr>
-<tr><td>3D</td><td>[3D Column](3D/3D_Column_Chart)</td></tr>
-<tr><td>Error Bars</td><td>[Column Chart with Error Bars](Error_Chart)</td></tr>
+<tr><td>3D</td><td>[3D Column](3D/Column_Chart)</td></tr>
+<tr><td>Error Bars</td><td>[Column Chart with Error Bars](Error_Chart/Column_Chart)</td></tr>
 <tr><th colspan=2>SUPPORTED CHART PLOTS</th></tr>
 <tr><td>Polar</td><td>N/A</td></tr>
 <tr><td>Radar</td><td>N/A</td></tr>
@@ -40,7 +40,7 @@ This article explains how to create a basic Column chart as well as configure se
 <tr><th colspan=2>RELATED TYPES</th></tr>
 <tr><td></td><td>[Bar](Bar_Chart)</td></tr>
 <tr><th colspan=2>SEE ALSO</th></tr>
-<tr><td></td><td><a href="http://www.anychart.com/chartopedia/chart-types/column-chart/" target="_blank">Chartopedia: Column Chart</a></td></tr>
+<tr><td></td><td><a href="https://www.anychart.com/chartopedia/chart-types/column-chart/" target="_blank">Chartopedia: Column Chart</a></td></tr>
 <tr><td></td><td>[General Settings](General_Settings)</td></tr>
 </table>
 
@@ -93,7 +93,7 @@ Here is a full list of methods used to configure visual settings that are availa
 * {api:anychart.core.cartesian.series.Column#hoverFill}hoverFill(){api}, {api:anychart.core.cartesian.series.Column#hoverHatchFill}hoverHatchFill(){api}, {api:anychart.core.cartesian.series.Column#hoverStroke}hoverStroke(){api} configure the visual settings on hover
 * {api:anychart.core.cartesian.series.Column#selectFill}selectFill(){api}, {api:anychart.core.cartesian.series.Column#selectHatchFill}selectHatchFill(){api}, {api:anychart.core.cartesian.series.Column#selectStroke}selectStroke(){api} configure the visual settings on select
 
-You can learn more from the [Appearance Settings](../Appearance_Settings) article.
+You can learn more from the [Appearance Settings](../Appearance_Settings) section.
 
 In the sample below, there are two Column series with some of the appearance settings configured:
 
@@ -230,4 +230,4 @@ Using AnyChart, you can create 3D versions of some chart types, including the Co
 
 To learn about 3D charts in general, see [3D Charts](3D/Overview).
 
-The 3D Column chart is described in the following article: [3D Column Chart](3D_Charts/3D_Column_Chart).
+The 3D Column chart is described in the following article: [3D Column Chart](3D/Column_Chart).

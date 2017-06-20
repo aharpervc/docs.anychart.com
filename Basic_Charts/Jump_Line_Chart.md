@@ -1,4 +1,4 @@
-{:index 1}
+{:index 1.5}
 # Jump Line Chart
 
 * [Overview](#overview)
@@ -20,7 +20,7 @@ Jump Line Charts are usually used for demonstrating rates.
 
 <table border="1" class="seriesTABLE">
 <tr><th colspan=2>API</th></tr>
-<tr><td>Class</td><td>{api:anychart.core.cartesian.series.Jumpline}anychart.core.cartesian.series.Jumpline{api}</td></tr>
+<tr><td>Class</td><td>{api:anychart.core.cartesian.series.JumpLine}anychart.core.cartesian.series.JumpLine{api}</td></tr>
 <tr><th colspan=2>DATA</th></tr>
 <tr><td>Data Fields</td><td>[x, value](../Working_with_Data/Overview)</td></tr>
 <tr><td>Multiple Series</td><td>[YES](../Working_with_Data/Overview)</td></tr>
@@ -28,7 +28,7 @@ Jump Line Charts are usually used for demonstrating rates.
 <tr><td>Stacked</td><td>N/A</td></tr>
 <tr><td>Vertical</td><td>[Vertical Jump Line](Vertical/Jump_Line_Chart)</td></tr>
 <tr><td>3D</td><td>N/A</td></tr>
-<tr><td>Error Bars</td><td>[Jump Line Chart with Error Bars](Error_Chart)</td></tr>
+<tr><td>Error Bars</td><td>[Jump Line Chart with Error Bars](Error_Chart/Jump_Line_Chart)</td></tr>
 <tr><th colspan=2>SUPPORTED CHART PLOTS</th></tr>
 <tr><td>Polar</td><td>N/A</td></tr>
 <tr><td>Radar</td><td>N/A</td></tr>
@@ -38,13 +38,13 @@ Jump Line Charts are usually used for demonstrating rates.
 <tr><td></td><td>[Line](Line_Chart)</td></tr>
 <tr><td></td><td>[Step Line](Step_Line_Chart)</td></tr>
 <tr><th colspan=2>SEE ALSO</th></tr>
-<tr><td></td><td><a href="http://www.anychart.com/chartopedia/chart-types/jump-line-chart/" target="_blank">Chartopedia: Jump Line Chart</a></td></tr>
+<tr><td></td><td><a href="https://www.anychart.com/chartopedia/chart-types/jump-line-chart/" target="_blank">Chartopedia: Jump Line Chart</a></td></tr>
 <tr><td></td><td>[General Settings](General_Settings)</td></tr>
 </table>
 
 ## Quick Start
 
-To create a  chart, use the {api:anychart#line}anychart.line(){api} chart constructor. 
+To create a chart, use the {api:anychart#line}anychart.line(){api} chart constructor. 
 
 To create a Jump line series call the {api:anychart.charts.Cartesian#jumpLine}jumpLine(){api} method.
 
@@ -87,11 +87,11 @@ Read the overview of general settings: [General Settings](General_Settings).
 
 Here is a full list of methods used to configure visual settings that are available for the Jump Line series:
 
-* {api:anychart.core.cartesian.series.Jumpline#color}color(){api} and {api:anychart.core.cartesian.series.Jumpline#stroke}stroke(){api} set the color and stroke
-* {api:anychart.core.cartesian.series.Jumpline#hoverStroke}hoverStroke(){api} configures the stroke on hover
-* {api:anychart.core.cartesian.series.Jumpline#selectStroke}selectStroke(){api} configures the stroke on select
+* {api:anychart.core.cartesian.series.JumpLine#color}color(){api} and {api:anychart.core.cartesian.series.JumpLine#stroke}stroke(){api} set the color and stroke
+* {api:anychart.core.cartesian.series.JumpLine#hoverStroke}hoverStroke(){api} configures the stroke on hover
+* {api:anychart.core.cartesian.series.JumpLine#selectStroke}selectStroke(){api} configures the stroke on select
 
-You can learn more from the [Appearance Settings](../Appearance_Settings) article.
+You can learn more from the [Appearance Settings](../Appearance_Settings) section.
 
 In the sample below, there are two Jump Line series with some of the appearance settings configured:
 

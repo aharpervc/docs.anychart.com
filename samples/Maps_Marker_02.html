@@ -16,7 +16,7 @@ anychart.onDocumentReady(function () {
     // that makes it possible to set coordinates
     // for the points and labels on the map and
     // required for custom projections and grid labels formatting.
-    // See http://docs.anychart.com/latest/Maps/Map_Projections
+    // See https://docs.anychart.com/latest/Maps/Map_Projections
 
     // create the dataset of points that are defined by latitude and longtitude values
     var dataSet_lat_long = anychart.data.set([
@@ -37,8 +37,8 @@ anychart.onDocumentReady(function () {
     var series_lat_long = australiaMap.marker(dataSet_lat_long);
 
     // format the tooltips of the lat_long series    
-    series_lat_long.tooltip().titleFormatter("{%Name}");
-    series_lat_long.tooltip().textFormatter("Yearly profit: ${%value}m");
+    series_lat_long.tooltip().titleFormat("{%Name}");
+    series_lat_long.tooltip().format("Yearly profit: ${%value}m");
 
     australiaMap.title("Marker series defined by latitude and longtitude");
     australiaMap.interactivity().zoomOnMouseWheel(false);

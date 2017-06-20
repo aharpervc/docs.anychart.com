@@ -48,7 +48,7 @@ series.hoverLabels(true);
 You can specify the text displayed in labels using [Text Formatters](Text_Formatters) mechanism. Here is how you can show a name of point instead of a value:
 
 ```
-series.labels().textFormatter("{%x}");
+series.labels().format("{%x}");
 ```
 
 {sample}CS\_Labels\_02{sample}
@@ -89,7 +89,7 @@ That is how labels background with the settings from above looks like:
 
 ### Font
 
-Font settings are set as for any other [Text](Text_Settings):
+Font settings are set as for any other [Text](../Appearance_Settings/Text_Settings):
 
 ```
 // font labels font settings

@@ -25,7 +25,7 @@ The Step Area and Area chart types share almost all the settings, so this articl
 <tr><td>Stacked</td><td>[Stacked Step Area](Stacked/Value/Step_Area_Chart), [Percent Stacked Step Area](Stacked/Percent/Step_Area_Chart)</td></tr>
 <tr><td>Vertical</td><td>[Vertical Step Area](Vertical/Step_Area_Chart)</td></tr>
 <tr><td>3D</td><td>N/A</td></tr>
-<tr><td>Error Bars</td><td>[Step Area Chart with Error Bars](Error_Chart)</td></tr>
+<tr><td>Error Bars</td><td>[Step Area Chart with Error Bars](Error_Chart/Step_Area_Chart)</td></tr>
 <tr><th colspan=2>SUPPORTED CHART PLOTS</th></tr>
 <tr><td>Polar</td><td>N/A</td></tr>
 <tr><td>Radar</td><td>N/A</td></tr>
@@ -38,7 +38,7 @@ The Step Area and Area chart types share almost all the settings, so this articl
 <tr><td></td><td>[Range Spline Area](Range_Spline_Area_Chart)</td></tr>
 <tr><td></td><td>[Range Step Area](Range_Step_Area_Chart)</td></tr>
 <tr><th colspan=2>SEE ALSO</th></tr>
-<tr><td></td><td><a href="http://www.anychart.com/chartopedia/chart-types/stepline-area-chart/" target="_blank">Chartopedia: Step Area Chart</a></td></tr>
+<tr><td></td><td><a href="https://www.anychart.com/chartopedia/chart-types/stepline-area-chart/" target="_blank">Chartopedia: Step Area Chart</a></td></tr>
 <tr><td></td><td>[General Settings](General_Settings)</td></tr>
 </table>
 

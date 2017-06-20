@@ -69,7 +69,7 @@ Below you can see our sample chart with starting angle shifted to 90°:
 
 ### Plot background
 
-You can change polar background using {api:anychart.core.ui.Background}background(){api} method. Learn more about it in [Background settings tutorial](../Appearance_Settings/Background).
+You can change polar background using {api:anychart.core.ui.Background}background(){api} method. Learn more about it in [Background settings tutorial](../../Appearance_Settings/Background).
 
 ```
 var background = chart.background();
@@ -89,7 +89,7 @@ Here is a sample of a polar chart with tuned background:
 
 ## Axes
 
-In AnyChart axis is an object that allows you to configure chart grid, axis line along with tick marks and labels, axis scale and settings and else. All axis features are described in [Axes Basics](../Axes_and_Grids/Axis_Basics) tutorial.
+In AnyChart axis is an object that allows you to configure chart grid, axis line along with tick marks and labels, axis scale and settings and else. All axis features are described in [Axes Basics](../../Axes_and_Grids/Axis_Basics) tutorial.
 
 ### Stroke
 
@@ -105,7 +105,7 @@ var yAxis = chart.yAxis();
 yAxis.stroke("2 #9900FF");
 ```
 
-More information on possible stroke settings can be found in [Strokes and Lines tutorial](../Appearance_Settings/Strokes_and_Lines).
+More information on possible stroke settings can be found in [Strokes and Lines tutorial](../../Graphics/Stroke_Settings).
 
 Here is a sample of tuned X and Y axes. Y axis has a dashed stroke and X axis has a stroke colored with gradient.
 
@@ -126,7 +126,7 @@ Take a look at the demonstration of Y Axis inversion on the sample below:
 
 ### Logarithmic Scale
 
-Logarithmic scale can be used in polar charts. You can set the scale type using {api:anychart.scales}scale(){api} method. More information about scale types can be found in [Scale tutorial](../Axes_and_Grids/Scales#types)
+Logarithmic scale can be used in polar charts. You can set the scale type using {api:anychart.scales}scale(){api} method. More information about scale types can be found in [Scale tutorial](../../Axes_and_Grids/Scales#types)
 
 ```
 // create logarithmic scale
@@ -150,19 +150,19 @@ AnyChart allows to customise Axes Labels in any required way. Below there is a s
 var chart = anychart.polar();
 
 // set y axis labels position and format content
-chart.yAxis().labels().offsetX(12).textFormatter("{%Value}{useNegativeSign:false}");
+chart.yAxis().labels().offsetX(12).format("{%Value}{useNegativeSign:false}");
 
 var xLabels = chart.xAxis().labels();
 // set labels padding
 xLabels.padding(5);
 // set font weight for labels
 xLabels.fontWeight(900);
-xLabels.textFormatter("{%Value}°");
+xLabels.format("{%Value}°");
 ```
 
 {sample}BCT\_PolarChart\_07{sample}
 
-You can change labels' background. Learn more about background configuration in [Background settings tutorial](../Appearance_Settings/Background).
+You can change labels' background. Learn more about background configuration in [Background settings tutorial](../../Appearance_Settings/Background).
 
 ```
 // settings for axis labels
@@ -223,7 +223,7 @@ grid.layout("circuit");
 grid.stroke("white");    
 ```
 
-**Note:** full information about grid settings can be found in [grid section of Scale tutorial](../Axes_and_Grids/Scales#grids).
+**Note:** full information about grid settings can be found in [grid section of Scale tutorial](../../Axes_and_Grids/Scales#grids).
 
 This sample below demonstrates two polar charts with adjusted visualisation of the radial type of grid as well as of the circular one.
 
@@ -235,7 +235,7 @@ In this section we will explain how to add and configure data labels and tooltip
 
 Let's do that with the following example: we will make data labels bold, format labels so they show only the the value of the point and tooltips to show detailed description.
 
-When formatting tooltips, we use {api:anychart.core.ui.Tooltip#textFormatter}textFormatter(){api} to adjust source of content and visual appearance. To control labels’ position use {api:anychart.core.ui.Label#position}position(){api} parameter.
+When formatting tooltips, we use {api:anychart.core.ui.Tooltip#format}format(){api} to adjust source of content and visual appearance. To control labels’ position use {api:anychart.core.ui.Label#position}position(){api} parameter.
 
 Next sample demonstrates bold series labels which display value of a point and tooltip shows detailed description.
 
@@ -256,7 +256,7 @@ labels.fontWeight(900);
 
 // format tooltip content
 var tooltip = series.tooltip();
-tooltip.textFormatter(function(e){
+tooltip.format(function(e){
   // tooltip text
   return "Value: " + this.value + "\nAverage: " + e.getStat("seriesAverage").toFixed(2);
 });
@@ -266,7 +266,7 @@ tooltip.textFormatter(function(e){
 
 ## Series Types
 
-Polar chart supports: Line, Area and Marker series types. You can learn how to change and configure styles of these types in following: [Area chart](Area_Chart), [Line chart](Line-Spline-StepLine_Charts) and [Marker chart](Marker_Chart).
+Polar chart supports: Line, Area and Marker series types. You can learn how to change and configure styles of these types in following: [Area chart](../Area_Chart), [Line chart](../Line_Chart) and [Marker chart](../Marker_Chart).
 
 {sample}BCT\_PolarChart\_12{sample}
 
