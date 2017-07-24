@@ -38,13 +38,13 @@ var data = anychart.data.set([
 
 // create data set for the marker series
 var data_marker = anychart.data.set([
-    {lat: -37.85, long: 144.79, name: "Melbourne", label:{position:"left", anchor:"rightBottom"}},
-    {lat: -33.79, long: 150.64, name: "Sydney", label:{position:"bottom", anchor:"lefttop"}, type:"star5", fill: "gold", stroke: "#CC9900",  hoverFill: "gold", hoverStroke: "#CC9900", selectFill: "gold", selectStroke: "#CC9900"},
-    {lat: -27.40, long: 152.44, name: "Brisbane", label:{position: "top", anchor:"rightBottom"}},
-    {lat: -27.98, long: 153.04, name: "Gold Coast", label:{position:"right", anchor:"leftBottom"}},
-    {lat: -34.98, long: 138.42, name: "Adelaide", label:{position:"bottomLeft", anchor:"rightTop"}},
+    {lat: -37.85, long: 144.79, name: "Melbourne", label:{position:"left", anchor:"right-bottom"}},
+    {lat: -33.79, long: 150.64, name: "Sydney", label:{position:"bottom", anchor:"left-top"}, type:"star5", fill: "gold", stroke: "#CC9900",  hoverFill: "gold", hoverStroke: "#CC9900", selectFill: "gold", selectStroke: "#CC9900"},
+    {lat: -27.40, long: 152.44, name: "Brisbane", label:{position: "top", anchor:"right-bottom"}},
+    {lat: -27.98, long: 153.04, name: "Gold Coast", label:{position:"right", anchor:"left-bottom"}},
+    {lat: -34.98, long: 138.42, name: "Adelaide", label:{position:"bottomLeft", anchor:"right-top"}},
     {lat: -31.93, long: 115.96, name: "Perth", label:{position:"top", anchor:"bottomRight"}},
-    {lat: -42.88, long: 147.31, name: "Hobart", label:{position:"bottom", anchor:"top"}}
+    {lat: -42.88, long: 147.31, name: "Hobart", label:{position:"bottom", anchor:"center-top"}}
 ]);
 
 
@@ -93,7 +93,7 @@ series_marker.zIndex(1000);
 // name of the chart
 map.title("10 most popular flights through Australia");
 // set container id for the chart
-map.container('container');
+map.container("container");
 // initiate chart drawing
 map.draw();
 });    

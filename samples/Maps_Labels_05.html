@@ -79,7 +79,7 @@ var dataSet_romney = anychart.data.set([
   map.geoData("anychart.maps.united_states_of_america");
 
   // set the title and its preferences
-  map.title().useHtml(true).hAlign('center');
+  map.title().useHtml(true).hAlign("center");
   map.title('<span style="font-size:14px;">Presidental elections 2012</span><br><span style="font-size:10px;">Set the overlapping mode for series</span>');
 
   // set the series
@@ -91,16 +91,13 @@ var dataSet_romney = anychart.data.set([
   series_romney.labels(true);
 
   // set the overlapping mode for the map
-  map.overlapMode(false);
+  map.overlapMode("no-overlap");
   // enable overlapping for the series
-  series_obama.overlapMode("allowOverlap");
+  series_obama.overlapMode("allow-overlap");
 
-  // the following lines mean the same as the lines above
-  // map.overlapMode(anychart.enums.LabelsOverlapMode.NO_OVERLAP);
-  // series_obama.labels().overlapMode(true);
 
   // set the container
-  map.container('container');
+  map.container("container");
   map.draw();
   });
 

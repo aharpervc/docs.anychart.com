@@ -91,9 +91,9 @@ var dataSet_romney = anychart.data.set([
   series_romney.labels(true);
 
   // set the overlapping mode for the map
-  map.overlapMode(false);
+  map.overlapMode('no-overlap');
   // enable overlapping for the series
-  series_obama.overlapMode("allowOverlap");
+  series_obama.overlapMode("allow-overlap");
 
   // set tooltips
   series_obama.tooltip().format("Most voted for Obama");
