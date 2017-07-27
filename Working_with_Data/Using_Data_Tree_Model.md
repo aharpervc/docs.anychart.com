@@ -89,7 +89,7 @@ var newData = [
 
 // adding data
 tree.addData(
-  newData,                                  // data
+  newData,   // data
   "as-table" // data type
 );
 ```
