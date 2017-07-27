@@ -32,6 +32,14 @@
   // create column chart
   var chart = anychart.column(data);
 
+  // configure axis labels
+  chart.yAxis().labels().format('${%Value}{scale:(1000)(1000)|(k)(m)}');
+  // tune tooltips format
+  chart.tooltip().format('${%Value}');
+  // tune interactivity
+  chart.interactivity().selectionMode('none');
+
+  // configire drilldown
   chart.listen('pointClick', function (e) {
       if (e.point.get('drillDown')) {
             chart.getSeries(0).data(e.point.get('drillDown'));
@@ -41,7 +49,7 @@
       }
   });
 
-  // set container id for the chart
+  // set container id and display chart
   chart.container('container').draw();
   });</script>
 </head>
