@@ -13,7 +13,6 @@
  * [Multilevel Drilldown](#multilevel-drilldown)
  * [Change Series Type](#change-series-type)
  * [Table Data](#table-data) 
- * [Event Listeners](#event-listeners)
 
 ## Overview
 
@@ -29,9 +28,9 @@ For those who never worked with AnyChart and those who want to dig deeper, let's
 
 ### Prepare Data
 
-The first thing we need to have for a chart with drill-down is the data. There a lot of ways to organize and use it we will use one of the simpliest one for this basic sample.
+The first thing we need to have for a chart with drill-down is the data. There [a lot of ways to load, organize and use data in AnyChart](Working_with_Data/Overview) we will use one of the simpliest one for this basic sample.
 
-The data for the drilldown chart can be organized in a tree-linke structre, each row has `x` and `value`, and a field where the drill-down data set set is stored which can have any name, in our sample it is `drillDown`: 
+The data for the drilldown chart can be organized in a tree-like structure, each row has `x` and `value`, and a field where the drilldown data set set is stored which can have any name, in our sample it is `drillDown`: 
 
 ```
 var data = [
@@ -96,7 +95,6 @@ That’s it, you can see it for yourself:
 
 {sample}CS\_Drilldown\_Chart\_01{sample}
 
-
 Basically the work is done, this foundation provides us with all we need and we will now [tune the chart](#tune-the-chart), add [a drill-up button], [multi-level drill-down](#multilevel-drilldown) and ability to [define the series type of drill-down series](#change-series-type).
 
 ## Tune the Chart
@@ -109,8 +107,11 @@ The basic chart is nice but we obviously need to tune it so it looks nice in thi
 We can do all this using this simple code:
 
 ```
+// configure axis labels
 chart.yAxis().labels().format('${%Value}{scale:(1000)(1000)|(k)(m)}');
+// tune tooltips format
 chart.tooltip().format('${%Value}');
+// tune interactivity selection mode
 chart.interactivity().selectionMode('none');
 ```
 
@@ -120,25 +121,79 @@ And now the chart looks and feels better:
 
 ## Drill-Up Button
 
-One thing you mey want is to have a button on a chart that will take an end user a level up, this button may be implemented in several ways, we will show three of them.
+One thing you may want is to have a button on a chart that will take an end user a level up, this button may be implemented in several ways, we will show three of them.
 
-First, you can create an interactive labels with AnyChart and add it to a chart:
+First, you can create an interactive label with AnyChart and add it to a chart. To do so we need to add a label, configure how it looks and behaves, and modify drilldown behavior so the button appears when needed:
+
+```
+// configire drilldown on point click
+chart.listen('pointClick', function (e) {
+  if (e.point.get('drillDown')) {
+        chart.getSeries(0).data(e.point.get('drillDown'));
+        chart.label(0).enabled(true);            
+  }
+});
+
+// add chart label, set placement, color and text
+chart.label(0, {enabled: false, position: 'rightTop', anchor: 'rightTop', padding: 5, offsetX: 5, offsetY: 5, text: "Back", background: {stroke: "1 black", enabled: true}});
+
+// load initial data on label click
+chart.label(0).listen('click', function() {
+  chart.getSeries(0).data(data);
+  chart.label(0).enabled(false);
+}); 
+```
+
+That's it, with a miniscule amount of coding you have a drilldown column chart:
 
 {sample}CS\_Drilldown\_Chart\_03{sample}
 
 ### jQuery Option
 
-Here is the same sample with button created using jQuery: http://jsfiddle.net/89Lj8w0y/2/
+With jQuery you need to create an element, assign proper styles and code reactions.
+
+Here is the same sample as above but with a button created using jQuery: [AnyChart Drilldown Chart sample with jQuery Button](http://jsfiddle.net/rpm6nu5t/).
 
 ### Pure HTML Option
 
-You can use pure HTML option and  http://jsfiddle.net/89Lj8w0y/6/
+You can go and create a button without use of anything, just pure HTML and JavaScript:
+
+Here is the same sample as above but with a button created using pure HTML and JavaScript: [AnyChart Drilldown Chart sample with HTML Button](http://jsfiddle.net/ha3g4vfn/).
 
 ## Improvements
 
+The sample shown above is an illustration of idea and you can make tons of improvements depending on the nature of your task. We will showcase several of them below.
+
 ## Multilevel Drilldown
 
-потом говорим что на самом деле изначальный код позволяет вставить многоуровневую вложенность и все будет тоже работать
+The first modification is not a modification at all, it is a demonstration of the flexibility of concept shown in the basic sample: without changing anything in the code you can have multilevel drilldown chart. All you need to do is actually add multilevel data. Here is how the data will look like:
+
+```
+var data = [
+{"x": "2015", "value": 2195081, "drillDown": [
+  {"x": "Q1", "value": 792026, "drillDown": [
+    {"x": "Jan", "value": 302000},
+    {"x": "Feb", "value": 190000},
+    {"x": "Mar", "value": 300026}]
+  },
+  {"x": "Q2", "value": 610501, "drillDown": [
+    {"x": "Apr", "value": 305000},
+    {"x": "May", "value": 100501},
+    {"x": "Jun", "value": 205000}]
+  },
+  {"x": "Q3", "value": 441843, "drillDown": [
+    {"x": "Jul", "value": 240000},
+    {"x": "Aug", "value":  51000},
+    {"x": "Sep", "value": 150843}]
+  },
+  {"x": "Q4", "value": 350711, "drillDown": [
+    {"x": "Oct", "value": 150000},
+    {"x": "Nov", "value": 100700},
+    {"x": "Dec", "value": 100011}
+  ]}]}];
+```
+
+And if you feed such data to the code you'll be able to drill one more level down. And there is no limit, you can add more and more levels and it will still work.
 
 {sample}CS\_Drilldown\_Chart\_04{sample}
 
@@ -153,7 +208,3 @@ You can use pure HTML option and  http://jsfiddle.net/89Lj8w0y/6/
 Если вы высираете данные в плоском виде, то можно и так - нужен пример с плоскими данными и организацией из них drilldown
 
 {sample}CS\_Drilldown\_Chart\_06{sample}
-
-### Event Listeners
-
-сослаться и скаазть что можно много разного делать
