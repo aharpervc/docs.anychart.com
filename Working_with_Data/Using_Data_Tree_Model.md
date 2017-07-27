@@ -35,7 +35,7 @@ var treeType = anychart.data.tree(
     ]},
     {name: 'Node 2'}
   ],
-  anychart.enums.TreeFillingMethod.AS_TREE  // data type settings
+  "as-tree"  // data type settings
 );
 
 // Data set through table method
@@ -48,7 +48,7 @@ var treeType = anychart.data.tree(
     {name: 'Child Node 2', parent: 2, id: 4},
     {name: 'Node 2', id: 5}
   ],
-  anychart.enums.TreeFillingMethod.AS_TABLE // data type settings
+  "as-table" // data type settings
 );
 ```
 
@@ -90,7 +90,7 @@ var newData = [
 // adding data
 tree.addData(
   newData,                                  // data
-  anychart.enums.TreeFillingMethod.AS_TABLE // data type
+  "as-table" // data type
 );
 ```
 

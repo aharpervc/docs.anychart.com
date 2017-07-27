@@ -43,21 +43,21 @@
     // create ascending sort label
     sortAsc = createLabel("Ascending", 10, function() {
         // ascending sorting
-        chart.sort(anychart.enums.Sort.ASC);
+        chart.sort("asc");
         chart.title("Ascending");
     });    
 
     // create descending sort label
     sortDesc = createLabel("Descending", 90, function() {
         // descending sorting
-        chart.sort(anychart.enums.Sort.DESC);
+        chart.sort("desc");
         chart.title("Descending");
     });    
 
     // create no sort sort label
     sortAsc = createLabel("No sorting", 180, function() {
         // remove sorting
-        chart.sort(anychart.enums.Sort.NONE);
+        chart.sort("none");
         chart.title("No sorting");
     });    
     
@@ -148,7 +148,7 @@
     ];
 
     // set data and type settings to a chart 
-    chart.data(data, anychart.enums.TreeFillingMethod.AS_TREE);
+    chart.data(data, "as-tree");
     
     // remove headers
     chart.headers().enabled(null);

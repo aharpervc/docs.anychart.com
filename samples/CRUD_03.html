@@ -22,7 +22,7 @@
   // set chart type
   chart = anychart.column();
 
-  chart.title().text("Click on Column to Add a 5 to it's value ");
+  chart.title("Click on Column to Add a 5 to it's value ");
 
   // set data
   var column = chart.column(dataSet);
@@ -34,7 +34,7 @@
   column.listen(
 
     // listener type
-    anychart.enums.EventType.POINT_CLICK,
+    "pointClick",
 
     // function, if listener triggers
     function(e) {

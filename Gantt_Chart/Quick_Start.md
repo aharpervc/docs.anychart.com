@@ -95,7 +95,7 @@ anychart.onDocumentReady(function(){
   }];
   
   // data tree settings
-  var treeData = anychart.data.tree(rawData, anychart.enums.TreeFillingMethod.AS_TREE);
+  var treeData = anychart.data.tree(rawData, "as-tree");
   var chart = anychart.ganttProject();      // chart type
   chart.data(treeData);                     // chart data
   chart.container('container').draw();      // set container and initiate drawing
@@ -146,7 +146,7 @@ You can copy this to a file on your computer and open it in your browser to disp
 	      }];
 	
 	  // tree data settings
-	  var treeData = anychart.data.tree(rawData, anychart.enums.TreeFillingMethod.AS_TREE);
+	  var treeData = anychart.data.tree(rawData, "as-tree");
 	
 	  // chart type
 	  chart = anychart.ganttProject();

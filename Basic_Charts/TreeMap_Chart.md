@@ -75,7 +75,10 @@ var data = anychart.data.tree([
             ]}
         ]}
      ]} 
-], anychart.enums.TreeFillingMethod.AS_TREE);
+], "as-tree");
+
+// set data and data type settings
+chart = anychart.treeMap(data);
 ```
 
 Here is a sample of a treemap with data set this way:
@@ -90,33 +93,32 @@ Table representation is another way to load data into AnyChart JavaScript TreeMa
 
 ```
 //Data set through table method
-var data = anychart.data.tree([
-       {id:  1, parent: null, name: 'Eurasia'},
-       {id:  2, parent:    1, name: 'Asia'},
-       {id:  3, parent:    2, name: 'Eastern Asia'},
-       {id:  4, parent:    3, name: 'Mongolia',       value: 1564116,  capital: 'Ulan-Bator'},
-       {id:  5, parent:    3, name: 'China',          value: 1564116,  capital: 'Beijing'},
-       {id:  6, parent:    3, name: 'Southern Korea', value: 1564116,  capital: 'Seoul'},
-       {id:  7, parent:    3, name: 'Northern Korea', value: 120540,   capital: 'Pyongyang'},
-       {id:  8, parent:    3, name: 'Japan',          value: 1564116,  capital: 'Tokio'},
-       {id:  9, parent:    8, name: 'Hokkaido',       value: 83400},
-       {id: 10, parent:    9, name: 'Kyushu',         value: 35640},
-       {id: 11, parent:    9, name: 'Honshu',         value: 230500},
-       {id: 12, parent:    9, name: 'Shikoku',        value: 1200},
-       {id: 13, parent:    1, name: 'Europe'},
-       {id: 14, parent:   13, name: 'Northern Europe'},
-       {id: 15, parent:   14, name: 'Finland',        value: 338424,   capital: 'Helsinki'},
-       {id: 16, parent:   14, name: 'Great Britain',  value: 209331,   capital: 'London'},
-       {id: 17, parent:   14, name: 'Ireland',        value: 84421,    capital: 'Dublin'},
-       {id: 18, parent:   14, name: 'Scandinavia',    value: 928057},
-       {id: 19, parent:   18, name: 'Sweden',         value: 450295,   capital: 'Stockholm'},
-       {id: 20, parent:   18, name: 'Norway',         value: 385178,   capital: 'Oslo'},
-       {id: 21, parent:   18, name: 'Denmark',        value: 42923.53, capital: 'Copenhagen'},
-      ],
-  anychart.enums.TreeFillingMethod.AS_TABLE // data type settings
-  );
+var data = [
+  {id:  1, parent: null, name: 'Eurasia'},
+  {id:  2, parent:    1, name: 'Asia'},
+  {id:  3, parent:    2, name: 'Eastern Asia'},
+  {id:  4, parent:    3, name: 'Mongolia',       value: 1564116,  capital: 'Ulan-Bator'},
+  {id:  5, parent:    3, name: 'China',          value: 1564116,  capital: 'Beijing'},
+  {id:  6, parent:    3, name: 'Southern Korea', value: 1564116,  capital: 'Seoul'},
+  {id:  7, parent:    3, name: 'Northern Korea', value: 120540,   capital: 'Pyongyang'},
+  {id:  8, parent:    3, name: 'Japan',          value: 1564116,  capital: 'Tokio'},
+  {id:  9, parent:    8, name: 'Hokkaido',       value: 83400},
+  {id: 10, parent:    9, name: 'Kyushu',         value: 35640},
+  {id: 11, parent:    9, name: 'Honshu',         value: 230500},
+  {id: 12, parent:    9, name: 'Shikoku',        value: 1200},
+  {id: 13, parent:    1, name: 'Europe'},
+  {id: 14, parent:   13, name: 'Northern Europe'},
+  {id: 15, parent:   14, name: 'Finland',        value: 338424,   capital: 'Helsinki'},
+  {id: 16, parent:   14, name: 'Great Britain',  value: 209331,   capital: 'London'},
+  {id: 17, parent:   14, name: 'Ireland',        value: 84421,    capital: 'Dublin'},
+  {id: 18, parent:   14, name: 'Scandinavia',    value: 928057},
+  {id: 19, parent:   18, name: 'Sweden',         value: 450295,   capital: 'Stockholm'},
+  {id: 20, parent:   18, name: 'Norway',         value: 385178,   capital: 'Oslo'},
+  {id: 21, parent:   18, name: 'Denmark',        value: 42923.53, capital: 'Copenhagen'},
+];
 
-chart = anychart.treeMap(data);
+// set data and data type settings
+chart = anychart.treeMap(data, "as-table");
 ```
 
 Note that unless you use default field names listed in the beginning of the article you use mapping to make it clear for the component how to treat the data. 
@@ -168,13 +170,13 @@ That's how you can override header content:
 
 ```
 {name: "South-Eastern Asia",  header: {format: "SEA"}, children:[
-      {name: "Singapoor", value: 718.3, capital: 'Singapoor'},
-      {name: "Indonesia", value: 1919440, capital: "Jakarta"},
-      {name: "Thailand", value: 513.120, capital: 'Bangkok'},
-      {name: "Philippines", value: 300000, capital: 'Manila'},
-      {name: "Laos", value: 236800, capital: 'Vientiane'},
-      {name: "Cambodia", value: 181040, capital: 'Phnom Penh'}
-      ]}
+  {name: "Singapoor", value: 718.3, capital: 'Singapoor'},
+  {name: "Indonesia", value: 1919440, capital: "Jakarta"},
+  {name: "Thailand", value: 513.120, capital: 'Bangkok'},
+  {name: "Philippines", value: 300000, capital: 'Manila'},
+  {name: "Laos", value: 236800, capital: 'Vientiane'},
+  {name: "Cambodia", value: 181040, capital: 'Phnom Penh'}
+]}
 ```
 
 And that's how you can disable it completely for one element:
@@ -184,7 +186,7 @@ And that's how you can disable it completely for one element:
     children:[
     {name: "Asia"},
     {name: "Europe"},
-    ]}
+]}
 ```
 
 Sample below shows this way to change headers:
