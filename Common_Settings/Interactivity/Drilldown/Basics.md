@@ -1,6 +1,6 @@
-{:index 1}
+{:index 3}
 
-# Drill-down Chart
+# Drilldown Chart
 
 * [Overview](#overview)
 * [Step by Step Guide](#step-by-step-guide)
@@ -8,15 +8,12 @@
  * [Prepare Data](#prepare-data)
  * [Implement Drilldown](#implement-drilldown)
  * [Tune the Chart](#tune-the-chart)
- * [Drill-Up Button](#drill-up-button)
-* [Improvements](#improvements)
- * [Multilevel Drilldown](#multilevel-drilldown)
- * [Change Series Type](#change-series-type)
- * [Table Data](#table-data) 
+ * [Drill-Up Button](#drillup-button)
+* [Multilevel Drilldown](#multilevel-drilldown)
 
 ## Overview
 
-Creating a chart with drilldown in AnyChart is very easy and can be done in using so-called [event listeners](Event_Listeners) and amazingly {api:anychart}flexible API{api} and [data model](Working_with_Data/Overview). The very minimum you need is to create a ышь chart, feed it proper data and then tell chart what to do when the point is clicked.
+Creating a chart with drilldown in AnyChart is very easy and can be implemented using so-called [event listeners](Event_Listeners) and amazingly {api:anychart}flexible API{api} and [data model](Working_with_Data/Overview). The very minimum you need is to create a chart, feed it proper data and then tell chart what to do when the point is clicked.
 
 ## Step by Step Guide
 
@@ -95,7 +92,7 @@ That’s it, you can see it for yourself:
 
 {sample}CS\_Drilldown\_Chart\_01{sample}
 
-Basically the work is done, this foundation provides us with all we need and we will now [tune the chart](#tune-the-chart), add [a drill-up button], [multi-level drill-down](#multilevel-drilldown) and ability to [define the series type of drill-down series](#change-series-type).
+Basically the work is done, this foundation provides us with all we need and we will now [tune the chart](#tune-the-chart), add [a drill-up button](#drillup-button), and show that [multi-level drill-down](#multilevel-drilldown) is also possible.
 
 ## Tune the Chart
 
@@ -196,15 +193,3 @@ var data = [
 And if you feed such data to the code you'll be able to drill one more level down. And there is no limit, you can add more and more levels and it will still work.
 
 {sample}CS\_Drilldown\_Chart\_04{sample}
-
-## Change Series Type
-
-Как вариант можно еще добавить потом выбор типа серии в данных http://jsfiddle.net/89Lj8w0y/12/
-
-{sample}CS\_Drilldown\_Chart\_05{sample}
-
-### Table Data
-
-Если вы высираете данные в плоском виде, то можно и так - нужен пример с плоскими данными и организацией из них drilldown
-
-{sample}CS\_Drilldown\_Chart\_06{sample}
